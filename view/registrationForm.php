@@ -12,8 +12,8 @@ include_once "./leftBar.php";
 
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
-                <li class="breadcrumb-item"><a href="LMS-Dashboard.php">LMS Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Registration Form</li>
+                <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Registration</li>
             </ol>
         </nav>
         <div class="container">
@@ -21,32 +21,38 @@ include_once "./leftBar.php";
             <!-- upload Section form  start-->
             <div class="row">
                 <div class="section-title padd-15">
-                    <h2>Registration Form</h2>
+                    <h2>Registration</h2>
                 </div>
             </div>
-            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5 bg-body rounded flex" style="position: relative;">
+            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5  rounded flex" style="position: relative;">
                 <form>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffUserName" class="form-label"><i class="fa-solid fa-user fa-i"></i> UserName</label>
-                            <input type="text" class="form-control custom-control " id="staffuserNameId" name="staffname" placeholder="Enter UserName">
+                            <label for="UserName" class="form-label card-title-change"><i class="fa-solid fa-user fa-i"></i> UserName</label>
+                            <input type="text" class="form-control custom-control " id="userNameId" name="name" placeholder="Enter UserName">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffSecretkey" class="form-label"><i class="fa-solid fa-key fa-i"></i></i>Secret key</label>
-                            <input type="text" class="form-control custom-control" id="staffSecretkeyId" name="staffSecretkey" placeholder="Enter Staff Secret key">
+                            <label for="Number" class="form-label card-title-change"><i class="fa-solid fa-mobile-screen fa-i"></i> Phone number</label>
+                            <input type="number" class="form-control custom-control" id="phoneNumberId" name="phoneNumber" placeholder="Enter Phone number">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffUserPassword" class="form-label"><i class="fa-solid fa-lock fa-i"></i> Password</label>
-                            <input type="password" class="form-control custom-control" id="staffuserPasswordId" name="staffPassword" placeholder="Enter Password">
+                            <label for="UserPassword" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> Password</label>
+                            <input type="password" class="form-control custom-control" id="userPasswordId" name="Password" placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-3 hide" id="otpBoxId">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <label for="otp" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> OTP</label>
+                            <input type="text" class="form-control custom-control" id="otpId" name="otp" placeholder="Enter otp">
                         </div>
                     </div>
 
                     <div class="flex search-btn mt-5">
-                        <a id="idRegister" class="btn search  mb-4">Submit</a>
+                        <a id="idRegister" class="btn sendOTP mb-4">Submit</a>
                     </div>
                 </form>
             </div>

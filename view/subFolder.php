@@ -21,7 +21,7 @@ $iMasterBookName = $_GET['masterFolderName'] ? $_GET['masterFolderName'] : "";
 
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
-                <li class="breadcrumb-item"><a href="LMS-Dashboard.php">LMS Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
                 <li class="breadcrumb-item active"><a href="classRoom.php?iActive=6">Class Rooms</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $iMasterBookName; ?></li>
             </ol>

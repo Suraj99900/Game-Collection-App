@@ -1,35 +1,64 @@
 // Register User
+document.getElementById('idRegister').addEventListener('click', async () => {
+    const sUserName = document.getElementById('userNameId').value;
+    const sPhoneNumber = '+91' + document.getElementById('phoneNumberId').value;
+    const sPassword = document.getElementById('userPasswordId').value;
+    const sOTP = document.getElementById('otpId').value;
+    const otpBoxElement = document.getElementById('otpBoxId');
 
-$("#idRegister").click(function() {
-    var sStaffName = $("#staffuserNameId").val();
-    var sStaffKey = $("#staffSecretkeyId").val();
-    var sStaffPassword = $("#staffuserPasswordId").val();
+    if (sOTP === '') {
+        try {
+            const response = await fetch(API_URL + '/users/getOTP', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    phone_number: sPhoneNumber,
+                }),
+            });
 
-    // Prepare the data to send to the server
-    var userData = {
-        userName: sStaffName,
-        secretkey: sStaffKey,
-        password: sStaffPassword
-    };
+            const data = await response.json();
 
-    // Make an Ajax request
-    $.ajax({
-        url: API_URL + "/register", // URL to your server-side script
-        method: "POST", // HTTP method (POST for user registration)
-        data: userData, // Data to send to the server
-        dataType: "json", // Expected data type (e.g., JSON)
-        success: function(data) {
-            if (data.status_code === 200) {
-                // Registration was successful
-                alert(data.message);
-                // Redirect to another page
-                window.location.href = "loginScreen.php?staffAccess=1";
+            if (data.status == 200) {
+                responsePop('Success',data.message,'success','ok');
+                otpBoxElement.classList.add('show');
+                otpBoxElement.classList.remove('hide');
+            } else {
+                responsePop('Error',data.message,'error','ok');
             }
-        },
-        error: function(data) {
-            // Handle Ajax error
-            var $aData = data.responseJSON;
-            alert($aData.message);
+        } catch (error) {
+            console.log('Fetch error:', error);
+            responsePop('Error','An error occurred while making the request.','error','ok');
         }
-    });
+    } else {
+        try {
+            const response = await fetch(API_URL + '/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: sUserName,
+                    phoneNumber: sPhoneNumber,
+                    otp: sOTP,
+                    password: sPassword,
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.status == 200) {
+                responsePop('Success',data.message,'success','ok');
+                otpBoxElement.classList.add('show');
+                otpBoxElement.classList.remove('hide');
+                window.location.href = "../view/loginScreen.php";
+            } else {
+                responsePop('Error',data.message,'error','ok');
+            }
+        } catch (error) {
+            console.log('Fetch error:', error);
+            esponsePop('Error','An error occurred while making the request.','error','ok');
+        }
+    }
 });

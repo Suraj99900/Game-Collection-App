@@ -1,45 +1,62 @@
-// Register User
-
-$("#idLogin").click(function() {
-    var sStaffName = $("#staffuserNameId").val();
-    var sStaffPassword = $("#staffuserPasswordId").val();
-
+$("#idLogin").click(function () {
+    var sPhoneNumber = $("#phoneNumberId").val();
+    var sPassword = $("#userPasswordId").val();
 
     // Make an Ajax request
     $.ajax({
-        url: API_URL + "/login?userName="+sStaffName+"&password="+sStaffPassword, // URL to your server-side script
-        method: "GET", // HTTP method (POST for user registration)
-        success: function(data) {
-            if (data.status_code === 200) {
-                // Registration was successful
-                alert(data.message);
-                
-                $.ajax({
-                    url: "../session.php", // URL to your server-side script
-                    method: "POST", // HTTP method (POST for user registration)
-                    data: {
-                        "username":sStaffName,
-                        "password":sStaffPassword,
-                        "login":1
-                    },
-                    dataType: "json", // Expected data type (e.g., JSON)
-                    success: function(data) {
-                        console.log(data);
-                        if(data == 1){
-                            window.location.href = "../view/uploadScreen.php?staffAccess=1";
+        url: API_URL + "/users/login",
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        data: JSON.stringify({
+            phoneNumber: sPhoneNumber,
+            password: sPassword,
+        }),
+        success: function (data) {
+            try {
+                console.log(data);
+                const aData = data;
+
+                if (aData.status === 200) {
+                    responsePop('Success', aData.message, 'success', 'ok');
+
+                    // Make another Ajax request for session.php
+                    $.ajax({
+                        url: "../session.php",
+                        method: "POST",
+                        data: {
+                            "username": aData.body.username,
+                            "phoneNumber": aData.body.phoneNumber, 
+                            "password": sPassword,  // Assuming password is needed for session.php
+                            "login": 1
+                        },
+                        dataType: "json",
+                        success: function (sessionData) {
+                            console.log(sessionData);
+                            if (sessionData === 1) {
+                                window.location.href = "../view/Dashboard.php";
+                            } else {
+                                responsePop('Error', 'Failed to log in', 'error', 'ok');
+                            }
+                        },
+                        error: function (error) {
+                            // Handle Ajax error for session.php
+                            responsePop('Error', 'Failed to log in', 'error', 'ok');
                         }
-                    },
-                    error: function(data) {
-                        // Handle Ajax error
-                        alert('Error while genratng session.');
-                    }
-                });
+                    });
+                } else {
+                    responsePop('Error', aData.message, 'error', 'ok');
+                }
+            } catch (error) {
+                console.error(error);
+                responsePop('Error', 'Invalid response from the server', 'error', 'ok');
             }
         },
-        error: function(data) {
-            // Handle Ajax error
-            var $aData = data.responseJSON;
-            alert($aData.message);
+        error: function (error) {
+            // Handle Ajax error for /users/login
+            var $aData = error.responseJSON;
+            responsePop('Error', $aData.message, 'error', 'ok');
         }
     });
 });

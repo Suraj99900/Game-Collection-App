@@ -12,7 +12,7 @@ $iStaffAccess = $_GET['staffAccess'] ? $_GET['staffAccess'] : '';
     <!-- aside start  -->
     <div class="aside">
         <div class="logo">
-            <a href="#" style="font-size: 14px;"><span>E</span>-library</a>
+            <a href="#" style="font-size: 14px;"><span>G</span>-Project</a>
         </div>
 
         <div class="nav-toggler">

@@ -12,7 +12,7 @@ include_once "./leftBar.php";
 
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
-                <li class="breadcrumb-item"><a href="LMS-Dashboard.php">LMS Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="manageAvailableBook.php?iActive=3&staffAccess=1">Manage Available Book</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Add Available Book</li>
             </ol>

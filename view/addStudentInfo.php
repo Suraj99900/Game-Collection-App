@@ -16,7 +16,7 @@ if (!$bIsLogin) {
     <section class="Student-Info section " id="studentInfoId">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
-                <li class="breadcrumb-item"><a href="LMS-Dashboard.php">LMS Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="studentInfo.php?iActive=4&staffAccess=1">Manage Student Info</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Add Student Info</li>
             </ol>

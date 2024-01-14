@@ -15,7 +15,7 @@ if (!$bIsLogin) {
     <section class="section ">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
-                <li class="breadcrumb-item"><a href="LMS-Dashboard.php">LMS Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Manage Log</li>
             </ol>
         </nav>

@@ -16,8 +16,8 @@ include_once "./leftBar.php";
 
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
-                <li class="breadcrumb-item"><a href="LMS-Dashboard.php">LMS Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Staff Login</li>
+                <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Login</li>
             </ol>
         </nav>
         <div class="container">
@@ -25,22 +25,22 @@ include_once "./leftBar.php";
             <!-- upload Section form  start-->
             <div class="row">
                 <div class="section-title padd-15">
-                    <h2>Staff Login</h2>
+                    <h2> Login</h2>
                 </div>
             </div>
-            <h3 class="contact-title padd-15 typing">Welcome to AI&DS E-Library </h3>
-            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5 bg-body rounded flex" style="position: relative;">
+            <h3 class="contact-title padd-15 typing">Welcome G-Project </h3>
+            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5 rounded flex" style="position: relative;">
                 <form>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffUserName" class="form-label"><i class="fa-solid fa-user fa-i"></i> UserName</label>
-                            <input type="text" class="form-control custom-control " id="staffuserNameId" name="staffname" placeholder="Enter UserName">
+                            <label for="Number" class="form-label card-title-change"><i class="fa-solid fa-mobile-screen fa-i"></i> Phone number</label>
+                            <input type="number" class="form-control custom-control" id="phoneNumberId" name="phoneNumber" placeholder="Enter Phone number">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffUserPassword" class="form-label"><i class="fa-solid fa-lock fa-i"></i> Password</label>
-                            <input type="password" class="form-control custom-control" id="staffuserPasswordId" name="staffPassword" placeholder="Enter Password">
+                            <label for="UserPassword" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> Password</label>
+                            <input type="password" class="form-control custom-control" id="userPasswordId" name="Password" placeholder="Enter Password">
                         </div>
                     </div>
 

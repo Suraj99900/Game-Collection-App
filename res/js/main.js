@@ -1,9 +1,9 @@
 // Main API URL
-var API_URL = "http://localhost:8000/api";
+var API_URL = "http://localhost:3000/api";
 
 // =============== types
 const typed = document.querySelector(".typing");
-const string_data = ["Welcome to AI&DS E-Library", "Explore Knowledge Online", "Discover a World of Information"];
+const string_data = ["Welcome to G-Project", "Explore G-Project", "Discover a World of G-Project"];
 let ixd = 1;
 let i = 0;
 
@@ -255,3 +255,16 @@ const hideSidebar = () =>{
 }
 showSidebarBtn.addEventListener('click',showSidebar);
 hideSidebarBtn.addEventListener('click',hideSidebar);
+
+
+
+// alert response popbox
+
+function responsePop(title = '',message = '',icon = '',confirmButtonText = ''){
+    Swal.fire({
+        title: title,
+        text: message,
+        icon: icon,
+        confirmButtonText: confirmButtonText,
+    });
+}
