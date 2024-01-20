@@ -1,8 +1,10 @@
 <?php
 // include header section of template
-include_once "./CDN_Header.php";
-include_once "../session.php";
-$bIsLogin = $_SESSION['is_login'] ? $_SESSION['is_login'] : false;
+require_once "../config.php";
+include_once ABS_PATH_TO_PROJECT. "view/CDN_Header.php";
+include_once ABS_PATH_TO_PROJECT. "classes/sessionCheck.php";
+
+$bIsLogin = $oSessionManager->isLoggedIn ?$oSessionManager->isLoggedIn : false;
 ?>
 
 <body>
@@ -98,12 +100,22 @@ $bIsLogin = $_SESSION['is_login'] ? $_SESSION['is_login'] : false;
                                 </div>
                             <?php } else { ?>
                                 <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
-                                    <a href="../view/registrationForm.php" class="card-body bg-card-low card-flex-column">
+                                    <a href="../view/userDashboard.php" class="card-body bg-card-low card-flex-column">
                                         <div class="card-body text-center mt-5 ">
-                                            <i class="fa-solid fa-user fa-lg"></i>
+                                            <i class="fa-solid fa-grip-vertical fa-lg"></i>
                                         </div>
                                         <div class="card-body text-center mt-3">
-                                            <h5 class="card-title-change">Register</h5>
+                                            <h5 class="card-title-change">Dashboard</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
+                                    <a href="../view/logOut.php" class="card-body bg-card-low card-flex-column">
+                                        <div class="card-body text-center mt-5 ">
+                                            <i class="fa-solid fa-circle-exclamation fa-lg"></i>
+                                        </div>
+                                        <div class="card-body text-center mt-3">
+                                            <h5 class="card-title-change">Log Out</h5>
                                         </div>
                                     </a>
                                 </div>

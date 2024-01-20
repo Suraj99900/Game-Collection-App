@@ -20,21 +20,21 @@ $("#idLogin").click(function () {
 
                 if (aData.status === 200) {
                     responsePop('Success', aData.message, 'success', 'ok');
-
+                    console.log(ABS_URL);
                     // Make another Ajax request for session.php
                     $.ajax({
-                        url: "../session.php",
+                        url: ABS_URL + "ajaxSession.php?sFlag=setSessionData",
                         method: "POST",
                         data: {
+                            "id":aData.body._id,
                             "username": aData.body.username,
-                            "phoneNumber": aData.body.phoneNumber, 
+                            "phoneNumber": aData.body.phoneNumber,
                             "password": sPassword,  // Assuming password is needed for session.php
-                            "login": 1
+                            "login": 1,
                         },
                         dataType: "json",
                         success: function (sessionData) {
-                            console.log(sessionData);
-                            if (sessionData === 1) {
+                            if (sessionData.iUserID != '') {
                                 window.location.href = "../view/Dashboard.php";
                             } else {
                                 responsePop('Error', 'Failed to log in', 'error', 'ok');
@@ -49,7 +49,7 @@ $("#idLogin").click(function () {
                     responsePop('Error', aData.message, 'error', 'ok');
                 }
             } catch (error) {
-                console.error(error);
+                console.log(error);
                 responsePop('Error', 'Invalid response from the server', 'error', 'ok');
             }
         },

@@ -1,7 +1,8 @@
 <?php
 // include header section of template
-include_once "./CDN_Header.php";
-include_once "./leftBar.php";
+require_once "../config.php";
+include_once ABS_PATH_TO_PROJECT."view/CDN_Header.php";
+include_once ABS_PATH_TO_PROJECT."view/leftBar.php";
 ?>
 
 
@@ -98,7 +99,10 @@ include_once "./leftBar.php";
 <?php
 include_once "./CDN_Footer.php";
 ?>
-<script src="../controller/LoginController.js"></script>
+
 <script>
+    var ABS_URL = '<?php echo ABS_URL ?>';
     setInterval(typeing, 150);
 </script>
+
+<script src="../controller/LoginController.js"></script>

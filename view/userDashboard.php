@@ -1,31 +1,35 @@
 <?php
-// include header section of template
-include_once "./CDN_Header.php";
-include_once "./leftBar.php";
 
-$bIsLogin = $_SESSION['is_login'] ? $_SESSION['is_login'] : false;
+// include header section of template
+require_once "../config.php";
+include_once ABS_PATH_TO_PROJECT . "view/CDN_Header.php";
+include_once ABS_PATH_TO_PROJECT . "view/leftBar.php";
+include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
+
+$bIsLogin = $oSessionManager->isLoggedIn ? $oSessionManager->isLoggedIn : false;
+
 if (!$bIsLogin) {
-    header("Location: loginScreen.php?staffAccess=1", true, 301);
+    header("Location: loginScreen.php", true, 301);
     exit;
 }
 ?>
 
 <!-- main Content start -->
 <div class="main-content">
-    <section class="section ">
+    <section class="section overflow">
 
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
                 <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Manage Issue Book</li>
+                <li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
             </ol>
         </nav>
 
-        <div class="container">
+        <div class="">
             <!-- Dashboard Section form  start-->
             <div class="row">
                 <div class="section-title padd-15">
-                    <h2>Dashboard</h2>
+                    <h2>User Dashboard</h2>
                 </div>
             </div>
         </div>
@@ -35,63 +39,69 @@ if (!$bIsLogin) {
             <aside>
                 <ul>
                     <li>
-                        <a href="manageIssueBook.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded active"><i class="fa-regular fa-id-card"></i>
-                            <h5>Manage Issue Book</h5>
+                        <a href="userDashboard.php" class="shadow-lg p-3 mb-5 rounded active"><i class="fa-regular fa-id-card"></i>
+                            <h5>Personal Info</h5>
                         </a>
                     </li>
                     <li>
                         <a href="manageReturnBook.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-arrow-rotate-left"></i>
-                            <h5>Manage Return Book</h5>
+                            <h5>Wallet</h5>
                         </a>
                     </li>
                     <li>
                         <a href="manageAvailableBook.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-book-open-reader"></i>
-                            <h5>Manage Available Book</h5>
+                            <h5>Bank Details</h5>
                         </a>
                     </li>
                     <li>
                         <a href="manageStaff.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-user-tie"></i>
-                            <h5>Manage Staff</h5>
+                            <h5>Orders</h5>
                         </a>
                     </li>
                     <li>
                         <a href="manageLog.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
-                            <h5>Manage Log</h5>
+                            <h5>Account Security</h5>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="manageLog.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                            <h5>Report/Complaints & Suggetion</h5>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="manageLog.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                            <h5>About</h5>
                         </a>
                     </li>
                 </ul>
             </aside>
 
             <main>
-                <h2 class="text-center"><i class="fa-regular fa-id-card px-2"></i>Manage Issue Book</h2>
-                <div class="row align-items-center p-3">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <input type="search" class="form-control custom-control" id="searchById" name="searchbook" placeholder="Seacrh By book name , student name , ISBN and ZPRN...">
+                <div class="card shadow bg-card-low row userInfo padd-15">
+                    <div class="mb-3 row">
+                        <label for="ID" class="col-sm-4 col-form-label c-text">ID: </label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="userID" value="">
+                        </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6  search-btn" style="display: flex; justify-content: right; align-items: flex-end; ">
-                        <a class="btn addBook" data-bs-toggle="modal" data-bs-target="#AddBookIssuesModalId" id="idAddBook"><i class="fa-solid fa-plus"></i> Issue</a>
+                    <div class="mb-3 row">
+                        <label for="MobileNumber" class="col-sm-4 col-form-label c-text">Mobile: </label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="mobileNumberID" value="">
+                        </div>
                     </div>
-                </div>
-                <table id="bookIssuesTable">
-                    <thead>
-                        <tr>
-                            <th>Sr.no</th>
-                            <th>Student Name</th>
-                            <th>ZPRN</th>
-                            <th>Book Name</th>
-                            <th>ISBN No</th>
-                            <th>Issue Date</th>
-                            <th>Added By</th>
-                            <th>Is Return</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-                <div class="row p-2 m-2 right-flex">
-                    <div id="paginationContainer" class="pagination col-md col-sm col-lg"></div>
+                    <div class="mb-3 row">
+                        <label for="UserName" class="col-sm-4 col-form-label c-text">UserName: </label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="userNameId" value="">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="Balance" class="col-sm-4 col-form-label c-text">Available balance: </label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="balanceID" value="">
+                        </div>
+                    </div>
                 </div>
             </main>
 

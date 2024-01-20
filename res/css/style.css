@@ -122,6 +122,13 @@ li {
 
 }
 
+.card-flex-column-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+}
+
 .section {
     background: var(--bg-black-900);
     min-height: 100vh;
@@ -136,6 +143,9 @@ li {
 
 .main-content {
     padding-left: 270px;
+}
+.remove-main-content{
+    padding: 0;
 }
 
 .padd-15 {
@@ -1835,6 +1845,9 @@ td a i {
 .c-text{
     color: var(--text-black-900);
 }
+.c-text-vl{
+    color: var(--text-black-700);
+}
 .breadcrumb-item.active{
     color: var(--skin-color);
 }
@@ -1886,4 +1899,7 @@ td a i {
     background-color: var(--skin-color) !important;
 }
 
+.overflow{
+    overflow: hidden;
+}
 
