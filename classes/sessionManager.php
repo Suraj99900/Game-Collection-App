@@ -20,23 +20,31 @@ class SessionManager
     {
 
         // Start session
-        session_start();
+        if (!session_status()) {
 
+
+            session_start();
+        }
         $this->iUserID = $_SESSION['iUserID'];
         $this->sUserMobileNo = $_SESSION['sUserMobileNo'];
         $this->sUserName = $_SESSION['sUserName'];
-        $this->sAccessToken = $_SESSION['sAccessToken'];
+        // $this->sAccessToken = $_SESSION['sAccessToken'];
         $this->isLoggedIn = $_SESSION['isLoggedIn'];
 
         // Session close
         session_write_close();
+
     }
 
     public function fSetSessionData($aSessionData)
     {
 
         // Start session
-        session_start();
+        if (!session_status()) {
+
+
+            session_start();
+        }
 
         // Set session data
         $_SESSION['iUserID'] = $aSessionData['id'];
@@ -54,7 +62,7 @@ class SessionManager
         session_write_close();
     }
 
-    
+
 
     public function isLoggedIn()
     {

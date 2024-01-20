@@ -20,7 +20,7 @@ $("#idLogin").click(function () {
 
                 if (aData.status === 200) {
                     responsePop('Success', aData.message, 'success', 'ok');
-                    console.log(ABS_URL);
+
                     // Make another Ajax request for session.php
                     $.ajax({
                         url: ABS_URL + "ajaxSession.php?sFlag=setSessionData",

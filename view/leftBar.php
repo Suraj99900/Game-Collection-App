@@ -4,9 +4,9 @@ include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
 
 $bIsLogin = $oSessionManager->isLoggedIn ? $oSessionManager->isLoggedIn : false;
 
-$iActive = $_GET['iActive'] ? $_GET['iActive'] : '';
+$iActive = isset($_GET['iActive']) ? $_GET['iActive'] : '';
 
-$iStaffAccess = $_GET['staffAccess'] ? $_GET['staffAccess'] : '';
+$iStaffAccess = isset($_GET['staffAccess']) ? $_GET['staffAccess'] : '';
 ?>
 
 <!-- main container start -->
