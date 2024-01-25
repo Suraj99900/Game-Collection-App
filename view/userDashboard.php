@@ -11,6 +11,8 @@ $bIsLogin = $oSessionManager->isLoggedIn ? $oSessionManager->isLoggedIn : false;
 if (!$bIsLogin) {
     header("Location: loginScreen.php", true, 301);
     exit;
+}else{
+    $iUserID = $oSessionManager->iUserID;
 }
 ?>
 
@@ -44,32 +46,32 @@ if (!$bIsLogin) {
                         </a>
                     </li>
                     <li>
-                        <a href="manageReturnBook.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-arrow-rotate-left"></i>
+                        <a href="manageWallet.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-arrow-rotate-left"></i>
                             <h5>Wallet</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageAvailableBook.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-book-open-reader"></i>
+                        <a href="manageAvailableBook.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-book-open-reader"></i>
                             <h5>Bank Details</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageStaff.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-user-tie"></i>
+                        <a href="manageStaff.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-user-tie"></i>
                             <h5>Orders</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageLog.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                        <a href="manageLog.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
                             <h5>Account Security</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageLog.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                        <a href="manageLog.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
                             <h5>Report/Complaints & Suggetion</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageLog.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                        <a href="manageLog.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
                             <h5>About</h5>
                         </a>
                     </li>
@@ -79,27 +81,27 @@ if (!$bIsLogin) {
             <main>
                 <div class="card shadow bg-card-low row userInfo padd-15">
                     <div class="mb-3 row">
-                        <label for="ID" class="col-sm-4 col-form-label c-text">ID: </label>
+                        <label for="ID" class="col-sm-4 col-form-label c-text"><b>ID:</b> </label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="userID" value="">
+                            <input type="text" readonly class="form-control-plaintext c-text-vl" id="userID" value="">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="MobileNumber" class="col-sm-4 col-form-label c-text">Mobile: </label>
+                        <label for="MobileNumber" class="col-sm-4 col-form-label c-text"><b>Mobile:</b> </label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="mobileNumberID" value="">
+                            <input type="text" readonly class="form-control-plaintext c-text-vl" id="mobileNumberID" value="">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="UserName" class="col-sm-4 col-form-label c-text">UserName: </label>
+                        <label for="UserName" class="col-sm-4 col-form-label c-text"><b>UserName:</b> </label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="userNameId" value="">
+                            <input type="text" readonly class="form-control-plaintext c-text-vl" id="userNameId" value="">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="Balance" class="col-sm-4 col-form-label c-text">Available balance: </label>
+                        <label for="Balance" class="col-sm-4 col-form-label c-text"><b>Available balance:</b> </label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="balanceID" value="">
+                            <input type="text" readonly class="form-control-plaintext c-text-vl" id="balanceID" value="">
                         </div>
                     </div>
                 </div>
@@ -184,4 +186,9 @@ if (!$bIsLogin) {
 include_once "./CDN_Footer.php";
 ?>
 
-<script src="../controller/manageIssueBookController.js"></script>
+<script>
+    var ABS_URL = '<?php echo ABS_URL ?>';
+    var iUserID = "<?php echo $iUserID; ?>"
+</script>
+
+<script src="../controller/userController.js"></script>

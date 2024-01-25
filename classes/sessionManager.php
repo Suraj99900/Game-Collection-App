@@ -21,18 +21,18 @@ class SessionManager
 
         // Start session
         if (!session_status()) {
-
-
             session_start();
         }
-        $this->iUserID = $_SESSION['iUserID'];
-        $this->sUserMobileNo = $_SESSION['sUserMobileNo'];
-        $this->sUserName = $_SESSION['sUserName'];
-        // $this->sAccessToken = $_SESSION['sAccessToken'];
-        $this->isLoggedIn = $_SESSION['isLoggedIn'];
+        if (isset($_SESSION["isLoggedIn"])) {
+            $this->iUserID = $_SESSION['iUserID'];
+            $this->sUserMobileNo = $_SESSION['sUserMobileNo'];
+            $this->sUserName = $_SESSION['sUserName'];
+            // $this->sAccessToken = $_SESSION['sAccessToken']; 
+            $this->isLoggedIn = $_SESSION['isLoggedIn'];
 
-        // Session close
-        session_write_close();
+            // Session close
+            session_write_close();
+        }
 
     }
 
@@ -41,8 +41,6 @@ class SessionManager
 
         // Start session
         if (!session_status()) {
-
-
             session_start();
         }
 

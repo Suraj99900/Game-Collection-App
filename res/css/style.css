@@ -205,6 +205,12 @@ li {
     margin-right: -15px;
     position: relative;
 }
+.flex-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 .folder {
     display: flex;
@@ -1632,6 +1638,7 @@ td a i {
 
     .aside {
         left: -270px;
+        z-index: 111;
     }
 
     .main-content {
@@ -1814,6 +1821,7 @@ td a i {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        z-index: 111;
     }
 
 
@@ -1840,6 +1848,11 @@ td a i {
     #hide__sidebar-btn {
         display: none;
     }
+}
+
+.badge{
+    background: var(--first-color);
+    color: var(--text-black-900);
 }
 
 .c-text{

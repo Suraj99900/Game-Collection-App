@@ -4,7 +4,11 @@ require_once "../config.php";
 include_once ABS_PATH_TO_PROJECT. "view/CDN_Header.php";
 include_once ABS_PATH_TO_PROJECT. "classes/sessionCheck.php";
 
+if (session_status()) {
 $bIsLogin = $oSessionManager->isLoggedIn ?$oSessionManager->isLoggedIn : false;
+} else {
+    $bIsLogin = false;
+}
 ?>
 
 <body>
@@ -100,7 +104,7 @@ $bIsLogin = $oSessionManager->isLoggedIn ?$oSessionManager->isLoggedIn : false;
                                 </div>
                             <?php } else { ?>
                                 <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
-                                    <a href="../view/userDashboard.php" class="card-body bg-card-low card-flex-column">
+                                    <a href="../view/userDashboard.php?iActive=3" class="card-body bg-card-low card-flex-column">
                                         <div class="card-body text-center mt-5 ">
                                             <i class="fa-solid fa-grip-vertical fa-lg"></i>
                                         </div>

@@ -16,6 +16,9 @@
     <!-- DataTable CDN -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
 
+    <!-- razorpay CDN -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="../res/css/style.css">

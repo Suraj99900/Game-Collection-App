@@ -17,7 +17,9 @@ if (isset($sScreenURL) && $sScreenURL != "") {
 }
 
 try {
-    $oSessionManager = new SessionManager();
+    if (session_status()) {
+        $oSessionManager = new SessionManager();
+    }
 } catch (Exception $e) {
     if (Input::request('_isAjax') !== null && Input::request('_isAjax', ['addslashes' => true])) {
         header("HTTP/1.1 401 Unauthorized");

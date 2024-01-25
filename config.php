@@ -12,3 +12,5 @@ define('API_URL','http://localhost:8000/api');
 define("ABS_PATH_TO_PROJECT","D:\\InstalledApp\\Xampp\\htdocs\\project\\gammingProject\\");
 define('ABS_URL','http://localhost/project/gammingProject/');
 define('INDEX_LOCATION','http://localhost/project/gammingProject/view/Dashboard.php');
+
+define('RAZORPAY_KEY_ID','rzp_test_maTowvalNvA422');
