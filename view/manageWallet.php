@@ -54,7 +54,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         </a>
                     </li>
                     <li>
-                        <a href="manageAvailableBook.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                        <a href="bankDetails.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-book-open-reader"></i>
                             <h5>Bank Details</h5>
                         </a>
@@ -89,8 +89,8 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
             <main>
                 <div class="card shadow bg-card-low col userInfo padd-15">
                     <div class="mb-3 mt-3  row">
-                        <h2 class='form-control-plaintext c-text-vl m-2 p-2'> Current Balance</h2>
-                        <div class="col ml-5 mt-2 p-2 flex-item">
+                        <h2 class=''> Current Balance</h2>
+                        <div class="col ml-5 mt-2 p-2form-control-plaintext c-text-vl m-2 p-2 flex-item">
                             <i class="fa-solid fa-wallet fa-lg m-1 p-2"></i>
                             <h3 class="form-control-plaintext c-text-vl m-2 p-2" style=" display: inline;"
                                 > <input type="text" readonly class="form-control-plaintext c-text-vl" style=" display: inline;" id="walletBalanceID"> </h3>
