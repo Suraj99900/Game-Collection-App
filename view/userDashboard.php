@@ -51,7 +51,7 @@ if (!$bIsLogin) {
                         </a>
                     </li>
                     <li>
-                        <a href="manageAvailableBook.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-book-open-reader"></i>
+                        <a href="bankDetails.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-book-open-reader"></i>
                             <h5>Bank Details</h5>
                         </a>
                     </li>
