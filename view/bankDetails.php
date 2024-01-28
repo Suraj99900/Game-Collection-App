@@ -3,10 +3,14 @@
 include_once "./CDN_Header.php";
 include_once "./leftBar.php";
 
-$bIsLogin = $_SESSION['is_login'] ? $_SESSION['is_login'] : false;
+$bIsLogin = $oSessionManager->isLoggedIn ? $oSessionManager->isLoggedIn : false;
 if (!$bIsLogin) {
     header("Location: loginScreen.php?staffAccess=1", true, 301);
     exit;
+}else {
+    $iUserID = $oSessionManager->iUserID;
+    $sUserName = $oSessionManager->sUserName;
+    $sUserMobileNo = $oSessionManager->sUserMobileNo;
 }
 ?>
 
@@ -99,8 +103,8 @@ if (!$bIsLogin) {
                                                 <form>
                                                     <div class="row align-items-center p-3">
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                            <label for="BookName" class="form-label c-text-vl"><i class="fa-solid fa-signature"></i> Account Name</label>
-                                                            <input type="text" class="form-control custom-control c-text-vl" id="bookNameId" name="bookname" placeholder="Enter Account Name">
+                                                            <label for="BookName" class="form-label c-text-vl"><i class="fa-solid fa-signature"></i> Actual Name</label>
+                                                            <input type="text" class="form-control custom-control c-text-vl" id="bookNameId" name="bookname" placeholder="Enter Actual Name">
 
                                                         </div>
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
@@ -115,7 +119,7 @@ if (!$bIsLogin) {
                                                     </div>
                                                     <div class="row align-items-center p-3">
                                                         <div class="col-sm-12 col-md-6 col-lg-4">
-                                                            <label for="BookName" class="form-label c-text-vl"><i class="fa-solid fa-signature"></i> Bank Name Name</label>
+                                                            <label for="BookName" class="form-label c-text-vl"><i class="fa-solid fa-signature"></i> Bank Name </label>
                                                             <input type="text" class="form-control custom-control c-text-vl" id="bookNameId" name="bookname" placeholder="Enter Bank Name">
 
                                                         </div>
