@@ -60,25 +60,25 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         </a>
                     </li>
                     <li>
-                        <a href="manageStaff.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                        <a href="transaction.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-user-tie"></i>
                             <h5>Orders</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageLog.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                        <a href="accountSecurity.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-tarp"></i>
                             <h5>Account Security</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageLog.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                        <a href="ReportComplaintsSuggetion.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-tarp"></i>
                             <h5>Report/Complaints & Suggetion</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageLog.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                        <a href="about.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-tarp"></i>
                             <h5>About</h5>
                         </a>

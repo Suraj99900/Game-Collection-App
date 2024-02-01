@@ -55,7 +55,7 @@ if (!$bIsLogin) {
                         </a>
                     </li>
                     <li>
-                        <a href="manageLog.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                        <a href="ReportComplaintsSuggetion.php?iActive=3&staffAccess=1" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
                             <h5>Manage Log</h5>
                         </a>
                     </li>
