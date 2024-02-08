@@ -41,12 +41,12 @@ $iActive = isset($_GET['iActive']) ? $_GET['iActive'] : '';
                         <a href="logOut.php" class="btn auth">Log Out</a>
                     <?php } else { ?>
                         <div class="col mb-3">
-                            <a href="loginScreen.php" class="btn auth login">Login
-                                Staff</a>
+                            <a href="loginScreen.php" class="btn auth login">Log in
+                            </a>
                         </div>
                         <div class="col">
                             <a href="registrationForm.php"
-                                class="btn auth register">Register Staff</a>
+                                class="btn auth register">Register</a>
                         </div>
                     <?php } ?>
                 </div>

@@ -42,6 +42,13 @@ body {
     box-sizing: border-box;
 }
 
+.img-Width{
+    width: 500px;
+}
+
+a{
+    color: var(--text-black-700);
+}
 
 .editor-container {
     width: 100%;
@@ -1133,7 +1140,16 @@ form .search-btn {
     width: 100%;
 }
 
+.img-box {
+    display: flex;
+    width: 100%;
+}
 .gallery .preview-box .img-box img {
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+
+.img-box img {
     width: 100%;
     border-radius: 0 0 3px 3px;
 }
@@ -1664,6 +1680,10 @@ td a i {
         padding-left: 1rem;
     }
 
+    .img-Width{
+        width: 400px;
+    }
+
     .dashboard aside li a {
         padding: 2rem;
     }
@@ -1726,6 +1746,9 @@ td a i {
         width: 100%;
         margin: auto;
     }
+    .img-Width{
+        width: 400px;
+    }
 
 }
 
@@ -1745,6 +1768,9 @@ td a i {
         padding: 5px;
         margin: 0 0px;
         /* color: var(--text-black-700); */
+    }
+    .img-Width{
+        width: 300px;
     }
 
     .blog .data-container .blog-box .blog-items,
@@ -1916,3 +1942,6 @@ td a i {
     overflow: hidden;
 }
 
+#PendingReportId ,#complitedReportId,#allTransactionTable,#successfulTransactionTable,#failTransactionTable{
+    background: var(--bg-black-50) !important;
+}

@@ -92,12 +92,12 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                     <div class="row">
                         <h3 class="col-lg-4 col-md-4 col-sm-12 my-4" style="text-align: center;"><a class="c-text badge"
                                 data-bs-toggle="collapse" href="#collapseAllId" role="button" aria-expanded="true"
-                                aria-controls="collapseAllId">
+                                aria-controls="collapseAllId" id="complitedReportDataId">
                                 COMPLETED
                             </a></h3>
                         <h3 class="col-lg-4 col-md-4 col-sm-12 my-4" style="text-align: center;"><a
                                 class="c-text badge " data-bs-toggle="collapse" href="#collapseSuccessfulId"
-                                role="button" aria-expanded="false" aria-controls="collapseSuccessfulId">
+                                role="button" aria-expanded="false" aria-controls="collapseSuccessfulId" id="penddiongDataReportId">
                                 PENDDING
                             </a></h3>
                         <h3 class="col-lg-4 col-md-4 col-sm-12 my-4" style="text-align: center;"><a class="c-text badge"
@@ -108,13 +108,35 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 
                     </div>
                     <div class="collapse show mt-4 p-3" id="collapseAllId">
-                        <div class="card card-body">
+                        <div class="card ">
                             <h4 class="text-center">COMPLETED</h4>
+
+                            <table id="complitedReportId" class="display">
+                                <thead>
+                                    <th>Type</th>
+                                    <th>Order Id</th>
+                                    <th>Description</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>Status</th>
+                                </thead>
+                            </table>
                         </div>
                     </div>
                     <div class="collapse mt-4 p-3" id="collapseSuccessfulId">
-                        <div class="card card-body">
+                        <div class="card ">
                             <h4 class="text-center">PENDDING</h4>
+
+                            <table id="PendingReportId" class="display">
+                                <thead>
+                                    <th>Type</th>
+                                    <th>Order Id</th>
+                                    <th>Description</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>Status</th>
+                                </thead>
+                            </table>
                         </div>
                     </div>
 
@@ -128,7 +150,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         </div>
                         <div class="offcanvas-body bg-card-low">
                             <div class="shadow-lg p-sm-1 p-md-2 p-lg-5 mb-lg-5 mb-md-5 mb-sm-2 bg-card-low rounded">
-                                <form>
+                                <div>
                                     <div class="row align-items-center p-3">
                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
                                             <label for="type" class="form-label c-text-vl"><i
@@ -170,13 +192,19 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                                             <textarea class="form-control c-text-vl" id="description" name="description"
                                                 placeholder="Enter Description" cols="30" rows="10"></textarea>
                                         </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                            <label for="select" class="form-label"><i
+                                                    class="fa-solid fa-file-arrow-up"></i> Select File </label>
+                                            <input type="file" class="form-control custom-control btn-primary"
+                                                id="FileId" name="File">
+                                        </div>
                                         <div class="text-center col-sm-12 col-md-6 col-lg-4 my-3">
                                             <button type="submit" class="btn search mb-1"
                                                 id="idSubmitForm">Submit</button>
                                         </div>
                                     </div>
 
-                                </form>
+                                </div>
 
                             </div>
                         </div>
@@ -230,14 +258,10 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 <?php
 include_once "./CDN_Footer.php";
 ?>
-<script>
-    // populate User for update
-    var sZPRN = '<?php echo $sZPRN_No ?>';
-</script>
-<script src="../controller/studentInfoController.js"></script>
 
 <script>
-    $(document).ready(() => {
-        getStudentInfoAndPopulateForm(sZPRN);
-    });
+    var iUserID = "<?php echo $iUserID ?>";
+    var sUserName = "    <?php echo $sUserName ?>";
+    var sUserMobileNo = "<?php echo $sUserMobileNo ?>";
 </script>
+<script src="../controller/reportComplaintsSuggetionController.js"></script>

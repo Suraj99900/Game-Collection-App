@@ -107,7 +107,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                                     name="verifyCode" placeholder="Enter OTP">
                             </div>
                             <div class="col-sm-12 col-md-3 col-lg-3 mt-4">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-primary" id="otpGenrateId" type="button">
                                     OTP
                                 </button>
                             </div>
@@ -121,7 +121,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                             </div>
 
                             <div class="flex search-btn mt-5 text-center">
-                                <a id="idSubmit" class="btn search mb-1">Reset Password</a>
+                                <a id="idResetButton" class="btn search mb-1">Reset Password</a>
                             </div>
                         </div>
 
@@ -176,3 +176,12 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 <?php
 include_once "./CDN_Footer.php";
 ?>
+
+
+<script>
+    var RAZORPAY_KEY_ID = "<?php echo RAZORPAY_KEY_ID ?>";
+    var iUserID = "<?php echo $iUserID ?>";
+    var sUserName = "    <?php echo $sUserName ?>";
+    var sUserMobileNo = "<?php echo $sUserMobileNo ?>";
+</script>
+<script src="../controller/accountSecurityController.js"></script>

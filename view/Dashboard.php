@@ -1,13 +1,14 @@
 <?php
 // include header section of template
 require_once "../config.php";
-include_once ABS_PATH_TO_PROJECT. "view/CDN_Header.php";
-include_once ABS_PATH_TO_PROJECT. "classes/sessionCheck.php";
+include_once ABS_PATH_TO_PROJECT . "view/CDN_Header.php";
+include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
 
 if (session_status()) {
-$bIsLogin = $oSessionManager->isLoggedIn ?$oSessionManager->isLoggedIn : false;
-} else {
-    $bIsLogin = false;
+    $bIsLogin = $oSessionManager->isLoggedIn ? $oSessionManager->isLoggedIn : false;
+    $iUserID = $oSessionManager->iUserID;
+    $sUserName = $oSessionManager->sUserName;
+    $sUserMobileNo = $oSessionManager->sUserMobileNo;
 }
 ?>
 
@@ -42,15 +43,16 @@ $bIsLogin = $oSessionManager->isLoggedIn ?$oSessionManager->isLoggedIn : false;
                     <div class="upload-btn-section shadow p-3  rounded flex bg-card-high">
                         <div class="row p-4">
                             <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
-                                <a href="#" class="card-body bg-card-low card-flex-column">
+                                <a href="../view/amuseScreen.php" class="card-body bg-card-low card-flex-column">
                                     <div class="card-body text-center mt-5 ">
                                         <i class="fa-solid fa-gamepad fa-lg"></i>
                                     </div>
                                     <div class="card-body text-center mt-3">
-                                        <h5 class="card-title-change">Games</h5>
+                                        <h5 class="card-title-change">Amuse</h5>
                                     </div>
                                 </a>
                             </div>
+                            <?php if($bIsLogin == true) {?>
                             <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
                                 <a href="#" class="card-body bg-card-low card-flex-column">
                                     <div class="card-body text-center mt-5 ">
@@ -81,6 +83,7 @@ $bIsLogin = $oSessionManager->isLoggedIn ?$oSessionManager->isLoggedIn : false;
                                     </div>
                                 </a>
                             </div>
+                            <?php }?>
                             <?php if (!$bIsLogin == true) { ?>
                                 <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
                                     <a href="../view/loginScreen.php" class="card-body bg-card-low card-flex-column">
@@ -104,7 +107,8 @@ $bIsLogin = $oSessionManager->isLoggedIn ?$oSessionManager->isLoggedIn : false;
                                 </div>
                             <?php } else { ?>
                                 <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
-                                    <a href="../view/userDashboard.php?iActive=3" class="card-body bg-card-low card-flex-column">
+                                    <a href="../view/userDashboard.php?iActive=3"
+                                        class="card-body bg-card-low card-flex-column">
                                         <div class="card-body text-center mt-5 ">
                                             <i class="fa-solid fa-grip-vertical fa-lg"></i>
                                         </div>

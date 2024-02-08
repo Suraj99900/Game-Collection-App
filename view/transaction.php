@@ -86,34 +86,64 @@ if (!$bIsLogin) {
             <main>
                 <div class="card shadow bg-card-low col userInfo padd-15">
                     <div class="row">
-                        <h3 class="col-lg-4 col-md-4 col-sm-12" style="text-align: center;"><a class="c-text badge" data-bs-toggle="collapse" href="#collapseAllId" role="button"
-                                aria-expanded="true" aria-controls="collapseAllId">
+                        <h3 class="col-lg-4 col-md-4 col-sm-12 mt-3" style="text-align: center;"><a class="c-text badge"
+                                data-bs-toggle="collapse" href="#collapseAllId" role="button" aria-expanded="true"
+                                aria-controls="collapseAllId" id="allOrderID">
                                 All Order
                             </a></h3>
-                        <h3 class="col-lg-4 col-md-4 col-sm-12" style="text-align: center;"><a class="c-text badge " data-bs-toggle="collapse" href="#collapseSuccessfulId" role="button"
-                                aria-expanded="false" aria-controls="collapseSuccessfulId">
+                        <h3 class="col-lg-4 col-md-4 col-sm-12 mt-3" style="text-align: center;"><a class="c-text badge "
+                                data-bs-toggle="collapse" href="#collapseSuccessfulId" role="button"
+                                aria-expanded="false" aria-controls="collapseSuccessfulId" id="successOrderfulId">
                                 Successful Order
                             </a></h3>
-                        <h3 class="col-lg-4 col-md-4 col-sm-12" style="text-align: center;"><a class="c-text badge" data-bs-toggle="collapse" href="#collapseFailId" role="button"
-                                aria-expanded="false" aria-controls="collapseFailId">
+                        <h3 class="col-lg-4 col-md-4 col-sm-12 mt-3" style="text-align: center;"><a class="c-text badge"
+                                data-bs-toggle="collapse" href="#collapseFailId" role="button" aria-expanded="false"
+                                aria-controls="collapseFailId"  id="failOrderId">
                                 Fail Order
                             </a></h3>
                     </div>
                     <div class="collapse show mt-4 p-3" id="collapseAllId">
-                        <div class="card card-body">
+                        <div class="card">
                             <h4 class="text-center">All Transaction</h4>
+                            <table id="allTransactionTable" class="display">
+                                <thead>
+                                    <th>UserId</th>
+                                    <th>OrderId</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </thead>
+                            </table>
                         </div>
                     </div>
+
                     <div class="collapse mt-4 p-3" id="collapseSuccessfulId">
-                        <div class="card card-body">
+                        <div class="card">
                             <h4 class="text-center">Successful Transaction</h4>
+                            <table id="successfulTransactionTable" class="display">
+                                <thead>
+                                    <th>UserId</th>
+                                    <th>OrderId</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </thead>
+                            </table>
                         </div>
                     </div>
+
                     <div class="collapse mt-4 p-3" id="collapseFailId">
-                        <div class="card card-body">
+                        <div class="card">
                             <h4 class="text-center">Fail Transaction</h4>
+                            <table id="failTransactionTable" class="display">
+                                <thead>
+                                    <th>UserId</th>
+                                    <th>OrderId</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </thead>
+                            </table>
                         </div>
                     </div>
+
                 </div>
 
             </main>
@@ -169,5 +199,10 @@ if (!$bIsLogin) {
 <?php
 include_once "./CDN_Footer.php";
 ?>
-
-<script src="../controller/manageAvailableBookController.js"></script>
+<script>
+    var RAZORPAY_KEY_ID = "<?php echo RAZORPAY_KEY_ID ?>";
+    var iUserID = "<?php echo $iUserID ?>";
+    var sUserName = "    <?php echo $sUserName ?>";
+    var sUserMobileNo = "<?php echo $sUserMobileNo ?>";
+</script>
+<script src="../controller/transactionController.js"></script>

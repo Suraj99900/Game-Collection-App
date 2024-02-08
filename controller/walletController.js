@@ -64,6 +64,38 @@ function cancelOrder(iUserID,orderId) {
     });
 }
 
+
+function failOrder(oFailOrder) {
+    $.ajax({
+        url: API_URL + "/razorpay/fail-order",
+        method: "POST",
+        data: JSON.stringify(
+            {
+                'user_id':iUserID,
+                'order_id':oFailOrder.metadata.order_id,
+                'payment_id':oFailOrder.metadata.order_id,
+                'code':oFailOrder.code,
+                'reason':oFailOrder.reason,
+                'description':oFailOrder.description,
+                'source':oFailOrder.source,
+                'step':oFailOrder.step
+            }
+        ),
+        contentType: "application/json",
+        success: function (data) {
+            console.log(data);
+            if (data.status === 201) {
+                responsePop('Error',oFailOrder.description,'error','ok');
+            }
+            console.log(data);
+        },
+        error: function (xhr, status, error) {
+            console.log('Ajax Error:', xhr.responseText);
+            responsePop('Error', error, 'error', 'ok');
+        }
+    });
+}
+
 function validateOrder(aResponse){
     $.ajax({
         url: API_URL + "/razorpay/validate",
@@ -234,9 +266,10 @@ function checkout(aData) {
         // alert(response.error.reason);
         // alert(response.error.metadata.order_id);
         // alert(response.error.metadata.payment_id);
-        console.log(response);
+        failOrder(response.error);
+        console.log(response.error);
+
     });
     rzp1.open();
-    e.preventDefault();
 
 }

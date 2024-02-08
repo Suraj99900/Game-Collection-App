@@ -94,9 +94,15 @@ if (!$bIsLogin) {
                             <i class="fa-solid fa-building-columns fa-lg m-1 p-2"></i>
                             <div class="row align-items-center P-2 m-2">
 
-                                <h3><label for="BookISBN" class="form-label">Pratik Kishor Kad</label></h3>
-                                <h4><input type="text" class="form-control custom-control" readonly id="bookISBNId"
-                                        name="bookisbn" value="986124562341265"></h4>
+                                <div class="userInfo" id="userInfoId">
+                                    <div class="alert alert-danger" id="detailEmptyAlertId" role="alert">
+                                        Details are empty.
+                                    </div>
+                                    <h3><input for="userName" class="form-control custom-control" readonly
+                                            id="userNameID"></h3>
+                                    <h4><input type="text" class="form-control custom-control" readonly
+                                            id="accountNumberId" name="accountNumber"></h4>
+                                </div>
 
                                 <div class="col-sm-1 col-md-6 col-lg-3">
                                     <button class="btn btn-primary  m-2" type="button" data-bs-toggle="offcanvas"
@@ -118,141 +124,125 @@ if (!$bIsLogin) {
                                             <div
                                                 class="shadow-lg p-sm-1 p-md-2 p-lg-5 mb-lg-5 mb-md-5 mb-sm-2 bg-card-low rounded">
                                                 <form>
-                                                    <div class="row align-items-center p-3">
+                                                    <div class="row align-items-center p-3" id="accountDetailsId">
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                            <label for="BookName" class="form-label c-text-vl"><i
+                                                            <label for="actualName" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Actual
                                                                 Name</label>
                                                             <input type="text"
                                                                 class="form-control custom-control c-text-vl"
-                                                                id="bookNameId" name="bookname"
+                                                                id="actualName" name="actualName"
                                                                 placeholder="Enter Actual Name">
-
                                                         </div>
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                            <label for="BookISBN" class="form-label c-text-vl"><i
+                                                            <label for="ifscCode" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-hashtag"></i> IFSC Code</label>
                                                             <input type="text"
-                                                                class="form-control custom-control c-text-vl "
-                                                                id="bookISBNId" name="bookisbn"
+                                                                class="form-control custom-control c-text-vl"
+                                                                id="ifscCode" name="ifscCode"
                                                                 placeholder="Enter IFSC Code">
-
                                                         </div>
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                            <label for="sem" class="form-label c-text-vl"><i
+                                                            <label for="accountNumber" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-hashtag"></i> Account
                                                                 Number</label>
                                                             <input type="number" class="form-select custom-control"
-                                                                id="semesterId" name="semester"
+                                                                id="accountNumber" name="accountNumber"
                                                                 placeholder="Enter Account Number">
                                                         </div>
                                                     </div>
+
                                                     <div class="row align-items-center p-3">
                                                         <div class="col-sm-12 col-md-6 col-lg-4">
-                                                            <label for="BookName" class="form-label c-text-vl"><i
-                                                                    class="fa-solid fa-signature"></i> Bank Name
-                                                            </label>
+                                                            <label for="bankName" class="form-label c-text-vl"><i
+                                                                    class="fa-solid fa-signature"></i> Bank Name</label>
                                                             <input type="text"
                                                                 class="form-control custom-control c-text-vl"
-                                                                id="bookNameId" name="bookname"
+                                                                id="bankName" name="bankName"
                                                                 placeholder="Enter Bank Name">
-
                                                         </div>
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                            <label for="BookName" class="form-label c-text-vl"><i
+                                                            <label for="state" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> State</label>
                                                             <input type="text"
-                                                                class="form-control custom-control c-text-vl"
-                                                                id="bookNameId" name="bookname"
-                                                                placeholder="Enter State">
-
+                                                                class="form-control custom-control c-text-vl" id="state"
+                                                                name="state" placeholder="Enter State">
                                                         </div>
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                            <label for="BookName" class="form-label c-text-vl"><i
+                                                            <label for="city" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> City</label>
                                                             <input type="text"
-                                                                class="form-control custom-control c-text-vl"
-                                                                id="bookNameId" name="bookname"
-                                                                placeholder="Enter City">
-
+                                                                class="form-control custom-control c-text-vl" id="city"
+                                                                name="city" placeholder="Enter City">
                                                         </div>
-
                                                     </div>
 
                                                     <div class="row align-items-center p-3">
                                                         <div class="col-sm-12 col-md-6 col-lg-4">
-                                                            <label for="BookName" class="form-label c-text-vl"><i
+                                                            <label for="address" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Address</label>
                                                             <input type="text"
                                                                 class="form-control custom-control c-text-vl"
-                                                                id="bookNameId" name="bookname"
-                                                                placeholder="Enter Address">
+                                                                id="address" name="address" placeholder="Enter Address">
                                                         </div>
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                            <label for="BookName" class="form-label c-text-vl"><i
+                                                            <label for="mobileNumber" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Mobile
                                                                 No.</label>
                                                             <input type="number"
                                                                 class="form-control custom-control c-text-vl"
-                                                                id="bookNameId" name="bookname"
+                                                                id="mobileNumber" name="mobileNumber"
                                                                 placeholder="Enter Mobile No.">
-
                                                         </div>
                                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                            <label for="BookName" class="form-label c-text-vl"><i
+                                                            <label for="email" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Email</label>
                                                             <input type="text"
-                                                                class="form-control custom-control c-text-vl"
-                                                                id="bookNameId" name="bookname"
-                                                                placeholder="Enter Email">
-
+                                                                class="form-control custom-control c-text-vl" id="email"
+                                                                name="email" placeholder="Enter Email">
                                                         </div>
-                                                        <div class="row align-items-center p-3">
-                                                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                                                <label for="BookName" class="form-label c-text-vl"><i
-                                                                        class="fa-solid fa-signature"></i> UPI
-                                                                    Id</label>
-                                                                <input type="text"
-                                                                    class="form-control custom-control c-text-vl"
-                                                                    id="bookNameId" name="bookname"
-                                                                    placeholder="Enter UPI Id">
-                                                            </div>
-                                                            <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-                                                                <label for="BookName" class="form-label c-text-vl"><i
-                                                                        class="fa-solid fa-signature"></i> Verification
-                                                                    Code</label>
-                                                                <div class="row align-items-center p-3">
-                                                                    <div class="col-sm-12 col-md-9 col-lg-9">
-                                                                        <input type="number"
-                                                                            class="form-control custom-control c-text-vl"
-                                                                            id="bookNameId" name="bookname"
-                                                                            placeholder="Enter Verification Code">
-                                                                    </div>
-                                                                    <div class="col-sm-12 col-md-3 col-lg-3">
-                                                                        <button class="btn btn-primary" type="button">
-                                                                            OTP
-                                                                        </button>
-                                                                    </div>
+                                                    </div>
+
+                                                    <div class="row align-items-center p-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                                            <label for="upiId" class="form-label c-text-vl"><i
+                                                                    class="fa-solid fa-signature"></i> UPI Id</label>
+                                                            <input type="text"
+                                                                class="form-control custom-control c-text-vl" id="upiId"
+                                                                name="upiId" placeholder="Enter UPI Id">
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                            <label for="verificationCode"
+                                                                class="form-label c-text-vl"><i
+                                                                    class="fa-solid fa-signature"></i> Verification
+                                                                Code</label>
+                                                            <div class="row align-items-center p-3">
+                                                                <div class="col-sm-12 col-md-9 col-lg-9">
+                                                                    <input type="text"
+                                                                        class="form-control custom-control c-text-vl"
+                                                                        id="verificationCode" name="verificationCode"
+                                                                        placeholder="Enter Verification Code">
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-3 col-lg-3">
+                                                                    <button class="btn btn-primary" id = "genrateOTPID"
+                                                                        type="button">OTP</button>
                                                                 </div>
                                                             </div>
-
-
                                                         </div>
-
-
                                                     </div>
 
                                                     <div class="flex search-btn mt-5">
-                                                        <a id="idUploadBook" class="btn search mb-1">Submit</a>
+                                                        <a id="bankDetailsSubmitId" class="btn search mb-1">Submit</a>
                                                     </div>
                                                 </form>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-1 col-md-6 col-lg-3 p-3 - m2">
-                                    <button class="btn btn-primary" type="button">
+                                    <button class="btn btn-primary" id="deleteBankDetailsId" type="button">
                                         <i class="fa-solid fa-trash"></i> Delete
                                     </button>
                                 </div>
@@ -313,5 +303,10 @@ if (!$bIsLogin) {
 <?php
 include_once "./CDN_Footer.php";
 ?>
+<script>
 
-<script src="../controller/manageAvailableBookController.js"></script>
+    var iUserID = "<?php echo $iUserID ?>";
+    var sUserName = "<?php echo $sUserName ?>";
+    var sUserMobileNo = "<?php echo $sUserMobileNo ?>";
+</script>
+<script src="../controller/bankDetailsController.js"></script>
