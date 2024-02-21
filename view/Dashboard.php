@@ -54,7 +54,7 @@ if (session_status()) {
                             </div>
                             <?php if($bIsLogin == true) {?>
                             <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
-                                <a href="#" class="card-body bg-card-low card-flex-column">
+                                <a href="winDashboard.php" class="card-body bg-card-low card-flex-column">
                                     <div class="card-body text-center mt-5 ">
                                         <i class="fa-solid fa-wine-glass-empty fa-lg"></i>
                                     </div>
@@ -178,4 +178,4 @@ if (session_status()) {
 
     <!-- include footer section -->
     <?php include_once "./CDN_Footer.php" ?>
-    <script src="../controller/SearchController.js"></script>
+    <!-- <script src="../controller/SearchController.js"></script> -->
