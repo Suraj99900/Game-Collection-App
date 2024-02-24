@@ -324,19 +324,14 @@ if (!$bIsLogin) {
                 <div class="row">
                     <div class="col-12">
                         <div class="col-12 mb-1" style="font-size:20px; color:var(--text-black-900);">Available
-                            Balance:<br><br> ₹ <span id="balance"
+                            Balance:<br><br> <span id="balance"
                                 style="font-size: 30px;font-weight: bold;font-family:Fantasy;">
-                                <?php //echo number_format(wallet($con, 'amount', $iUserID), 2);                            ?>
-                                0
+                                
                             </span></div>
                         <div class="col-12">
                             <div> <a href="recharge.php" class="btn btn-sm btn-primary m-0">Recharge</a>
-                                <a data-toggle="modal" href="#rule" data-backdrop="static" data-keyboard="false"
-                                    class="btn btn-sm btn-blue" style="border-radius: 20px 20px 20px 20px;">Read
-                                    Rule</a><a href="javascript:void(0);" onClick="reloadbtn(<?php echo $iUserID; ?>);"
-                                    class="reaload text-white pull-right mt-1"
-                                    onclick="getResultbyCategory(parity,parity)"> <i
-                                        class="icon ion-md-refresh"></i></a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rullModalID">Read
+                                    Rule</a>
                             </div>
                         </div>
                     </div>
@@ -370,7 +365,7 @@ if (!$bIsLogin) {
                     <div class="col-12 ">
                         <div class="row">
                             <div class="col">
-                                <h5 class='c-text-vl'>20240213286</h5>
+                                <h5 class='c-text-vl' id="periodParityID">20240213286</h5>
                             </div>
                             <div class="col">
                                 <div class="gameidtimer text-right">
@@ -385,7 +380,10 @@ if (!$bIsLogin) {
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="alert alert-info box-alert hide" role="alert">
+                        Wait for 30 second... !
+                    </div>
+                    <div class="row justify-content-center gameBox">
 
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 color-modal">
                             <div class="btn shadow rounded mb-3" id="greenBtnPeroid" style="background-color: #05ff00;">
@@ -403,7 +401,7 @@ if (!$bIsLogin) {
                     </div>
 
 
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center gameBox">
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 number-selection">
                             <div class="btn shadow rounded mb-3" style="background-color: gray;">0</div>
                         </div>
@@ -429,7 +427,7 @@ if (!$bIsLogin) {
                         </div>
                     </div>
 
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center gameBox">
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 number-selection">
                             <div class="btn shadow rounded mb-3" style="background-color: gray;">6</div>
                         </div>
@@ -456,7 +454,7 @@ if (!$bIsLogin) {
                         <i class="fa-solid fa-trophy fa-md"> Sapre</i>
                     </div>
                     <div class="col">
-                        <h5 class='c-text-vl'>20240213286</h5>
+                        <h5 class='c-text-vl' id="periodSapreID">20240213286</h5>
                     </div>
                     <div class="col">
                         <div class="gameidtimer text-right">
@@ -468,10 +466,14 @@ if (!$bIsLogin) {
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="alert alert-info box-alert hide" role="alert">
+                        Wait for 30 second... !
+                    </div>
+                    <div class="row justify-content-center gameBox">
 
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 color-modal">
-                            <div class="btn shadow rounded mb-3 " id="greenBtnSapre" style="background-color: #05ff00;">
+                            <div class="btn shadow rounded mb-3 " disabled id="greenBtnSapre"
+                                style="background-color: #05ff00;">
                                 Green</div>
                         </div>
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 color-modal">
@@ -486,7 +488,7 @@ if (!$bIsLogin) {
                     </div>
 
 
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center gameBox">
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 number-selection">
                             <div class="btn shadow rounded mb-3" style="background-color: gray;">0</div>
                         </div>
@@ -512,7 +514,7 @@ if (!$bIsLogin) {
                         </div>
                     </div>
 
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center gameBox">
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 number-selection">
                             <div class="btn shadow rounded mb-3" style="background-color: gray;">6</div>
                         </div>
@@ -538,7 +540,7 @@ if (!$bIsLogin) {
                         <i class="fa-solid fa-trophy fa-md"> Bcone</i>
                     </div>
                     <div class="col">
-                        <h5 class='c-text-vl'>20240213286</h5>
+                        <h5 class='c-text-vl' id="periodBconeID">20240213286</h5>
                     </div>
                     <div class="col">
                         <div class="gameidtimer text-right">
@@ -550,7 +552,10 @@ if (!$bIsLogin) {
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="alert alert-info box-alert hide" role="alert">
+                        Wait for 30 second... !
+                    </div>
+                    <div class="row justify-content-center gameBox">
 
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 color-modal">
                             <div class="btn shadow rounded mb-3" id="greenBtnBcone" style="background-color: #05ff00;">
@@ -568,7 +573,7 @@ if (!$bIsLogin) {
                     </div>
 
 
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center gameBox">
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 number-selection">
                             <div class="btn shadow rounded mb-3" style="background-color: gray;">0</div>
                         </div>
@@ -594,7 +599,7 @@ if (!$bIsLogin) {
                         </div>
                     </div>
 
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center gameBox">
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 number-selection">
                             <div class="btn shadow rounded mb-3" style="background-color: gray;">6</div>
                         </div>
@@ -620,7 +625,7 @@ if (!$bIsLogin) {
                         <i class="fa-solid fa-trophy fa-md"> Emerd</i>
                     </div>
                     <div class="col">
-                        <h5 class='c-text-vl'>20240213286</h5>
+                        <h5 class='c-text-vl' id="periodEmerdID">20240213286</h5>
                     </div>
                     <div class="col">
                         <div class="gameidtimer text-right">
@@ -632,7 +637,10 @@ if (!$bIsLogin) {
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="alert alert-info box-alert hide" role="alert">
+                        Wait for 30 second... !
+                    </div>
+                    <div class="row justify-content-center gameBox">
 
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 color-modal">
                             <div class="btn shadow rounded mb-3" id="greenBtnEmerd" style="background-color: #05ff00;">
@@ -650,7 +658,7 @@ if (!$bIsLogin) {
                     </div>
 
 
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center gameBox">
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 number-selection">
                             <div class="btn shadow rounded mb-3" style="background-color: gray;">0</div>
                         </div>
@@ -676,7 +684,7 @@ if (!$bIsLogin) {
                         </div>
                     </div>
 
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center gameBox">
                         <div class="col-3 col-sm-1 col-md-1 col-lg-1 number-selection">
                             <div class="btn shadow rounded mb-3" style="background-color: gray;">6</div>
                         </div>
@@ -770,7 +778,7 @@ if (!$bIsLogin) {
                 100 Selected amount
             </div>
             <div class="row justify-content-center">
-                <button class="col-2 col-sm-2 col-md-2 col-lg-2 btn m-2">Confirm</button>
+                <button class="col-2 col-sm-2 col-md-2 col-lg-2 btn m-2" id="submiteWinGameId">Confirm</button>
             </div>
         </div>
     </div>
@@ -789,6 +797,32 @@ if (!$bIsLogin) {
             </div>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="rullModalID" tabindex="-1" aria-labelledby="rullModalLabelID" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rullTitleModalLabelID">Rule of Guess</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <ol>
+                <li><p>3 minutes 1 issue, 2 minutes and 30 seconds to order, 30 seconds to show the lottery result. It opens all day. The total number of trade is 480 issues.</p></li>
+                <li><p>If you spend 100 to trade, after deducting 3 service fee, your contract amount is 97.</p></li>
+                <li><p>JOIN GREEN: if the result shows 1,3,7,9, you will get (97*2) 194</p><p>If the result shows 5, you will get (97*1.5) 145.</p></li>
+                <li><p>JOIN RED: if the result shows 2,4,6,8, you will get (97*2) 194; If the result shows 0, you will get (97*1.5) 145.</p></li>
+                <li><p>JOIN VIOLET: if the result shows 0 or 5, you will get (97*4.5) 436.</p></li>
+                <li><p>SELECT NUMBER: if the result is the same as the number you selected, you will get (97*9) 873.</p></li>
+            </ol>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -848,7 +882,7 @@ include_once "./CDN_Footer.php";
 ?>
 <script>
 
-    var iiUserID = "<?php echo $iUserID ?>";
+    var iUserID = "<?php echo $iUserID ?>";
     var sUserName = "<?php echo $sUserName ?>";
     var sUserMobileNo = "<?php echo $sUserMobileNo ?>";
 </script>
