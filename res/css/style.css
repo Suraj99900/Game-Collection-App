@@ -190,7 +190,7 @@ li {
 }
 
 .section-title h2 {
-    font-size: 40px;
+    font-size: 1.5rem;
     color: var(--text-black-900);
     font-weight: 700;
     position: relative;
@@ -303,7 +303,7 @@ li {
 }
 
 .fa-i {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     padding: 5px 40px;
     padding-left: 30px;
     display: inline-block;
@@ -965,9 +965,10 @@ form .custom-control {
     /* background: var(--bg-black-100); */
     border: 1px solid var(--bg-black-50);
     padding: 10px 25px;
-    font-size: 16px;
+    font-size: 0.8rem;
     color: var(--text-black-900);
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 form #seachHelp {
@@ -1948,7 +1949,7 @@ td a i {
 }
 
 .card-title-change {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: var(--text-black-900);
 }
 
@@ -2064,4 +2065,8 @@ td a i {
 
 .gameidtimer{
     float: right;
+}
+
+#userWinRecordTable_wrapper{
+    overflow-x: scroll;
 }

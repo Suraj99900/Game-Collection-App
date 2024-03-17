@@ -32,7 +32,7 @@ include_once "./leftBar.php";
             </div>
 
             <div class="student-info-table">
-                <table id="studentTableId" class="display">
+                <table id="studentTableId" class="display" style="width: 100%;">
                     <thead>
                         <tr>
                             <th>Sr no</th>

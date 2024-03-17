@@ -5,9 +5,11 @@ var distance = 0;
 var iPeriod;
 var gNumber;
 var gcolor;
-var gType;
+var gType = "parity";
 $(document).ready(function () {
     fetchWinRecordData("parity");
+    fetchUserWinRecord("parity");
+    fetchUserLossRecord("parity");
     fetchUserPersonalDetails();
     fetchCountDown();
     $('#loader').modal({ backdrop: 'static', keyboard: false })
@@ -168,15 +170,23 @@ function openTab(tabName) {
     if ((gType == "sapre" || gType == "sapreId") || (gType == "parityId" || gType == "parity") || (gType == "bconeId" || gType == "bcone") || (gType == "emerd" && gType || "emerdId")) {
         if (gType == "sapre") {
             fetchWinRecordData("sapre");
+            fetchUserWinRecord("sapre");
+            fetchUserLossRecord('sapre')
         }
         if (gType == "parity") {
             fetchWinRecordData("parity");
+            fetchUserWinRecord("parity");
+            fetchUserLossRecord("parity");
         }
         if (gType == "bcone") {
             fetchWinRecordData("bcone");
+            fetchUserWinRecord("bcone");
+            fetchUserLossRecord("bcone");
         }
         if (gType == "emerd") {
             fetchWinRecordData("emerd");
+            fetchUserWinRecord("emerd");
+            fetchUserLossRecord("emerd");
         }
     }
     document.getElementById(tabName.toLowerCase() + 'Id').style.display = "block";
@@ -280,8 +290,11 @@ function start_count_down() {
     document.getElementById("sapreCount").innerHTML = "<span class='timer'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer'>" + seconds + "</span>";
     document.getElementById("bconeCount").innerHTML = "<span class='timer'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer'>" + seconds + "</span>";
     document.getElementById("emerdCount").innerHTML = "<span class='timer'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer'>" + seconds + "</span>";
-    if (distance == 180) {
+    if (distance == 179) {
+        console.log(gType);
         fetchWinRecordData(gType);
+        fetchUserWinRecord(gType);
+        fetchUserLossRecord(gType);
     }
     if (distance <= 30) {
         $(".gameBox").css('display', 'none');
@@ -351,13 +364,14 @@ function fetchWinRecordData(type) {
     $.ajax({
         url: `${API_URL}/games/win-game/type/` + type,
         type: 'GET',
+        data: { sortOrder: 'desc' },
         success: function (response) {
-            console.log(response);
             var aData = response.data;
 
             $(`#allTransactionTable`).DataTable({
                 data: aData,
                 destroy: true,
+                order: [[0, 'desc']],
                 columns: [
                     {
                         data: 'period',
@@ -381,6 +395,111 @@ function fetchWinRecordData(type) {
             });
 
             fetchUserPersonalDetails();
+        },
+        error: function (xhr, status, error) {
+            console.log('Fetch error:', error);
+            responsePop('Error', 'An error occurred while making the request.', 'error', 'ok');
+        }
+    });
+}
+
+function fetchUserWinRecord(sType) {
+    $.ajax({
+        url: API_URL + "/games/win-game/userbet?gameType=" + sType + "&user_id=" + iUserID,
+        type: 'GET',
+        success: function (response) {
+            var aData = response.data;
+
+            $(`#userWinRecordTable`).DataTable({
+                data: aData,
+                destroy: true,
+                order: [[0, 'desc']],
+                columns: [
+                    {
+                        data: 'gameDetails[0].period',
+                        className: 'text-center' // Center align the text
+                    },
+                    {
+                        data: 'type',
+                        className: 'text-center' // Center align the text
+                    },
+                    {
+                        data: 'number',
+                        className: 'text-center', // Center align the text
+                        render: function (data, type, row) {
+                            return `<span style="color: ${row.color};">${data}</span>`;
+                        }
+                    },
+                    {
+                        data: 'color',
+                        className: 'text-center', // Center align the text
+                        render: function (data) {
+                            return `<span style="color: ${data};">${data}</span>`;
+                        }
+                    },
+                    {
+                        data: 'amount',
+                        className: 'text-center' // Center align the text
+                    },
+                    {
+                        data: 'winAmount',
+                        className: 'text-center' // Center align the text
+                    }
+                ]
+            });
+
+        },
+        error: function (xhr, status, error) {
+            console.log('Fetch error:', error);
+            responsePop('Error', 'An error occurred while making the request.', 'error', 'ok');
+        }
+    });
+}
+
+function fetchUserLossRecord(sType) {
+    $.ajax({
+        url: API_URL + "/games/win-game/userbet/loss?gameType=" + sType + "&user_id=" + iUserID,
+        type: 'GET',
+        success: function (response) {
+            var aData = response.data;
+
+            $(`#userLossRecordTable`).DataTable({
+                data: aData,
+                destroy: true,
+                order: [[0, 'desc']],
+                columns: [
+                    {
+                        data: 'period',
+                        className: 'text-center' // Center align the text
+                    },
+                    {
+                        data: 'type',
+                        className: 'text-center' // Center align the text
+                    },
+                    {
+                        data: 'number',
+                        className: 'text-center', // Center align the text
+                        render: function (data, type, row) {
+                            return `<span style="color: ${row.color};">${data}</span>`;
+                        }
+                    },
+                    {
+                        data: 'color',
+                        className: 'text-center', // Center align the text
+                        render: function (data) {
+                            return `<span style="color: ${data};">${data}</span>`;
+                        }
+                    },
+                    {
+                        data: 'amount',
+                        className: 'text-center', // Center align the text
+                        render: function (data,type,row) {
+                            return `<span style="color: red;">${data}</span>`;
+                        }
+                    }
+                ]
+            });
+
         },
         error: function (xhr, status, error) {
             console.log('Fetch error:', error);

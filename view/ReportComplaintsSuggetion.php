@@ -111,7 +111,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         <div class="card ">
                             <h4 class="text-center">COMPLETED</h4>
 
-                            <table id="complitedReportId" class="display">
+                            <table id="complitedReportId" class="display" style="width: 100%;">
                                 <thead>
                                     <th>Type</th>
                                     <th>Order Id</th>
@@ -127,7 +127,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         <div class="card ">
                             <h4 class="text-center">PENDDING</h4>
 
-                            <table id="PendingReportId" class="display">
+                            <table id="PendingReportId" class="display" style="width: 100%;">
                                 <thead>
                                     <th>Type</th>
                                     <th>Order Id</th>

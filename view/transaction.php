@@ -105,7 +105,7 @@ if (!$bIsLogin) {
                     <div class="collapse show mt-4 p-3" id="collapseAllId">
                         <div class="card">
                             <h4 class="text-center">All Transaction</h4>
-                            <table id="allTransactionTable" class="display">
+                            <table id="allTransactionTable" class="display" style="width: 100%;">
                                 <thead>
                                     <th>UserId</th>
                                     <th>OrderId</th>
@@ -119,7 +119,7 @@ if (!$bIsLogin) {
                     <div class="collapse mt-4 p-3" id="collapseSuccessfulId">
                         <div class="card">
                             <h4 class="text-center">Successful Transaction</h4>
-                            <table id="successfulTransactionTable" class="display">
+                            <table id="successfulTransactionTable" class="display" style="width: 100%;">
                                 <thead>
                                     <th>UserId</th>
                                     <th>OrderId</th>
@@ -133,7 +133,7 @@ if (!$bIsLogin) {
                     <div class="collapse mt-4 p-3" id="collapseFailId">
                         <div class="card">
                             <h4 class="text-center">Fail Transaction</h4>
-                            <table id="failTransactionTable" class="display">
+                            <table id="failTransactionTable" class="display" style="width: 100%;">
                                 <thead>
                                     <th>UserId</th>
                                     <th>OrderId</th>

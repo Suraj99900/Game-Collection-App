@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-black-900: #131331f8;
+    --bg-black-100: #334168f8;
+    --bg-black-50: #4f4fe6f8;
+    --text-black-900: #f4f5f8;
+    --text-black-700: #ffffff;
+    --text-black-1000: black;
+
+    --first-color: #ffcbcb;
+    --second-color: #ffb5b5;
+    --third-color: #407088;
+    --fourth-color: #132743;
+}
+
+body.dark {
+    --bg-black-900: #11172e;
+    --bg-black-100: #c4ebf5ea;
+    --bg-black-50: #5b5bd6f8;
+    --text-black-900: #8f8fc2;
+    --text-black-700: #131331f8;
+    --text-black-1000: rgb(0, 0, 0);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins' sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+.admin-text {
+    color: var(--text-black-1000);
+}
+
+.box-more {
+    background: transparent;
+    padding: 0.6rem;
+    pointer-events: painted;
+    cursor: pointer;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+form .custom-control{
+    color: var(--text-black-1000);
+}

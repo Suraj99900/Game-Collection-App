@@ -329,7 +329,7 @@ if (!$bIsLogin) {
                                 
                             </span></div>
                         <div class="col-12">
-                            <div> <a href="recharge.php" class="btn btn-sm btn-primary m-0">Recharge</a>
+                            <div> <a href="manageWallet.php?iActive=3" class="btn btn-sm btn-primary m-0">Recharge</a>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rullModalID">Read
                                     Rule</a>
                             </div>
@@ -714,9 +714,9 @@ if (!$bIsLogin) {
                     </h3>
                 </div>
                 <div class="collapse show mt-4 p-3" id="collapseAllId">
-                    <div class="card">
+                    <div class="card bg-card-low col">
                         <h4 class="text-center">Today Record</h4>
-                        <table id="allTransactionTable" class="display">
+                        <table id="allTransactionTable" class="display" style="width: 100%;">
                             <thead>
                                 <th>Peroid</th>
                                 <th>number</th>
@@ -726,6 +726,55 @@ if (!$bIsLogin) {
                     </div>
                 </div>
 
+                <div class="row">
+                    <h3 class="col-lg-12 col-md-12 col-sm-12 mt-3" style="text-align: center;">
+                        <a class="c-text badge" data-bs-toggle="collapse" href="#collapseUserWinRecordID" role="button"
+                            aria-expanded="true" aria-controls="collapseUserWinRecordID" id="UserWinRecordID">
+                            User Win Record
+                        </a>
+                    </h3>
+                </div>
+
+                <div class="collapse show mt-4 p-3" id="collapseUserWinRecordID">
+                    <div class="card bg-card-low col">
+                        <h4 class="text-center">User Win Record</h4>
+                        <table id="userWinRecordTable" class="display" style="width: 100%;">
+                            <thead>
+                                <th>Period</th>
+                                <th>Type</th>
+                                <th>Number</th>
+                                <th>Color</th>
+                                <th>Paid Amount</th>
+                                <th>Win Amount</th>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="col-lg-12 col-md-12 col-sm-12 mt-3" style="text-align: center;">
+                        <a class="c-text badge" data-bs-toggle="collapse" href="#collapseUserLossRecordID" role="button"
+                            aria-expanded="true" aria-controls="collapseUserLossRecordID" id="UserLossRecordID">
+                            User Loss Record
+                        </a>
+                    </h3>
+                </div>
+
+                <div class="collapse show mt-4 p-3" id="collapseUserLossRecordID">
+                    <div class="card bg-card-low col">
+                        <h4 class="text-center">User Loss Record</h4>
+                        <table id="userLossRecordTable" class="display" style="width: 100%;">
+                            <thead>
+                                <th>Period</th>
+                                <th>Type</th>
+                                <th>Number</th>
+                                <th>Color</th>
+                                <th>Loss Amount</th>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                
 
             </div>
         </div>

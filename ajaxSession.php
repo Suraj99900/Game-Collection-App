@@ -1,11 +1,12 @@
 <?php
 require_once "config.php";
-include_once ABS_PATH_TO_PROJECT . "classes/sessionManager.php";
+
 
 
 $aFunctionMap = array(
     'userLogin' => 'ajax_userLogin',
-    'setSessionData' => 'ajax_setSessionData'
+    'setSessionData' => 'ajax_setSessionData',
+    'setAdminSessionData' => 'ajax_setAdminSessionData'
 );
 
 $iFunc = $_REQUEST['sFlag'];
@@ -22,9 +23,19 @@ if (isset($aFunctionMap[$iFunc])) {
 
 function ajax_setSessionData($aRequestData)
 {
+    include_once ABS_PATH_TO_PROJECT . "classes/sessionManager.php";
     $oSessionManager = new SessionManager();
     $oSessionManager->fSetSessionData($aRequestData);
     return ['iUserID' => $oSessionManager->iUserID];
+}
+
+function ajax_setAdminSessionData($aRequestData)
+{
+
+    include_once ABS_PATH_TO_PROJECT . "classes/adminSessionManager.php";
+    $oAdminSessionManager = new AdminSessionManager();
+    $oAdminSessionManager->fSetSessionData($aRequestData);
+    return ['iStaffId' => $oAdminSessionManager->iStaffID];
 }
 
 function ajax_userLogin($aRequestData)
