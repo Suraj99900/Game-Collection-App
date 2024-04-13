@@ -66,9 +66,9 @@ if (!$bIsLogin) {
                         </a>
                     </li>
                     <li>
-                        <a href="accountSecurity.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                    <a href="paymentDashboard.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-tarp"></i>
-                            <h5>Payment</h5>
+                            <h5>User Debit </h5>
                         </a>
                     </li>
                     <!-- <li>

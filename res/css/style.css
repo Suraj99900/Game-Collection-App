@@ -2072,7 +2072,7 @@ td a i {
     overflow-x: scroll;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1499px) {
     .offcanvas-body {
         overflow-y: auto; /* Allow vertical scrolling */
         max-height: calc(100vh - 4rem); /* Adjust as needed to fit the viewport */
