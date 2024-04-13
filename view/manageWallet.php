@@ -92,15 +92,26 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         <h2 class=''> Current Balance</h2>
                         <div class="col ml-5 mt-2 p-2form-control-plaintext c-text-vl m-2 p-2 flex-item">
                             <i class="fa-solid fa-wallet fa-lg m-1 p-2"></i>
-                            <h3 class="form-control-plaintext c-text-vl m-2 p-2" style=" display: inline;"
-                                > <input type="text" readonly class="form-control-plaintext c-text-vl" style=" display: inline;" id="walletBalanceID"> </h3>
+                            <h3 class="form-control-plaintext c-text-vl m-2 p-2" style=" display: inline;"> <input
+                                    type="text" readonly class="form-control-plaintext c-text-vl"
+                                    style=" display: inline;" id="walletBalanceID"> </h3>
                         </div>
                     </div>
                 </div>
 
                 <div class="card shadow bg-card-low col userInfo padd-15 mt-5">
                     <div class="mb-3 mt-3 row-lg-6 row-md-6 row-sm-12">
-                        <h2 class='form-control-plaintext c-text-vl m-2 p-2'> Credit / Withdraw</h2>
+                        <div class="row">
+                            <div class="col">
+                                <h2 class='form-control-plaintext c-text-vl m-2 p-2'> Credit / Withdraw</h2>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-primary float-end" data-bs-toggle="offcanvas" href="#debitOffCanvasId"
+                                    role="button" id="userDebitRecordId" aria-controls="debitOffCanvasId">
+                                    Debit Amount
+                                </a>
+                            </div>
+                        </div>
                         <div class="container text-center">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-6 card bg-card-high">
@@ -162,7 +173,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                                                 <span class="badge">Withdraw</span>
                                             </div>
                                             <div class="col">
-                                                <h1><span class="badge btn py-3 px-5">$100</span></h1>
+                                                <h1><span class="badge btn py-3 px-5 debitAmount">$100</span></h1>
                                             </div>
                                         </div>
                                         <div class="row m-5">
@@ -173,7 +184,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                                                 <span class="badge">Withdraw</span>
                                             </div>
                                             <div class="col">
-                                                <h1><span class="badge btn py-3 px-5">$200</span></h1>
+                                                <h1><span class="badge btn py-3 px-5 debitAmount">$200</span></h1>
                                             </div>
                                         </div>
                                         <div class="row m-5">
@@ -184,7 +195,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                                                 <span class="badge">Withdraw</span>
                                             </div>
                                             <div class="col">
-                                                <h1><span class="badge btn py-3 px-5">$500</span></h1>
+                                                <h1><span class="badge btn py-3 px-5 debitAmount">$500</span></h1>
                                             </div>
                                         </div>
                                         <div class="row m-5">
@@ -195,7 +206,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                                                 <span class="badge ">Withdraw</span>
                                             </div>
                                             <div class="col">
-                                                <h1><span class="badge btn py-3 px-5">$1000</span></h1>
+                                                <h1><span class="badge btn py-3 px-5 debitAmount">$1000</span></h1>
                                             </div>
                                         </div>
                                     </div>
@@ -213,7 +224,27 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 <!-- main Content end-->
 
 
-
+<div class="offcanvas offcanvas-end" tabindex="-1" id="debitOffCanvasId" aria-labelledby="debitOffCanvasIdLabel"
+    style="width: 80%;">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title c-text" id="offcanvasAddStaffLabel">Debit Amount</h3>
+        <i data-bs-dismiss="offcanvas" aria-label="Close"
+            class="c-text btn-close text-reset btn c-text fa-solid fa-circle-xmark" style="font-size: 1.5rem;"></i>
+    </div>
+    <div class="offcanvas-body">
+        <div class="card col custom-table">
+            <h4 class="text-center">Debit Record</h4>
+            <table id="debitUserRecordTableId" class="display" style="width: 100%;">
+                <thead>
+                    <th class="text-center">Sr. no</th>
+                    <th class="text-center">Debit Amount</th>
+                    <th class="text-center">status</th>
+                    <th class="text-center">Date</th>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
 
 <!-- style switcher start -->
 <div class="style-switcher">
@@ -253,9 +284,9 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 include_once "./CDN_Footer.php";
 ?>
 <script>
-var RAZORPAY_KEY_ID = "<?php echo RAZORPAY_KEY_ID ?>";
-var iUserID = "<?php echo $iUserID ?>";
-var sUserName = "<?php echo $sUserName ?>";
-var sUserMobileNo = "<?php echo $sUserMobileNo ?>";
+    var RAZORPAY_KEY_ID = "<?php echo RAZORPAY_KEY_ID ?>";
+    var iUserID = "<?php echo $iUserID ?>";
+    var sUserName = "<?php echo $sUserName ?>";
+    var sUserMobileNo = "<?php echo $sUserMobileNo ?>";
 </script>
 <script src="../controller/walletController.js"></script>

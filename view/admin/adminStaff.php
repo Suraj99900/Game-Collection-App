@@ -84,7 +84,7 @@ if (!$bIsLogin) {
             </aside>
 
             <main>
-                <div class="card shadow bg-card-low row StaffInfo padd-15 p-2">
+                <div class="card shadow bg-card-low row StaffInfo padd-15 p-2 ">
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <a class="btn btn-primary float-end mx-2 my-4" data-bs-toggle="offcanvas"
@@ -93,7 +93,7 @@ if (!$bIsLogin) {
                             </a>
                         </div>
                     </div>
-                    <div class="card col">
+                    <div class="card col custom-table">
                         <h4 class="text-center">Manage Staff</h4>
                         <table id="allStaffTableId" class="display" style="width: 100%;">
                             <thead>

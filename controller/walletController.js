@@ -117,7 +117,7 @@ function validateOrder(aResponse){
         },
         error: function (xhr, status, error) {
             console.log('Ajax Error:', xhr.responseText);
-            responsePop('Error', error, 'error', 'ok');
+            responsePop('Error', xhr.response.message, 'error', 'ok');
         }
     });
 }
@@ -155,7 +155,102 @@ $(document).ready(() => {
 
         orderTheCoin(valueWithoutSymbol);
     });
+
+    $('.debitAmount').on('click',function(e){
+        var clickedElement = $(this);
+
+        var textValue = clickedElement.text();
+        var valueWithoutSymbol = textValue.replace('$', '');
+        insertDebitAmount(valueWithoutSymbol,iUserID);
+    });
+
+
+    $('#userDebitRecordId').on('click',function(e) {
+        fetchUserDebotRecord(iUserID);
+    })
 });
+
+
+function insertDebitAmount(value,user_id) {
+    $.ajax({
+        url: API_URL + "/transactions/debit",
+        method: "POST",
+        data: JSON.stringify(
+            {
+                'user_id':user_id,
+                'value':value,
+            }
+        ),
+        contentType: "application/json",
+        success: function (data) {
+            if (data.status === 200) {
+                var aData = data.body;
+                responsePop('Success',aData.message,'success','ok');
+                fetchUserPersonalDetails();
+            }
+            console.log(data);
+        },
+        error: function (xhr, status, error) {
+            console.log('Ajax Error:', JSON.parse(xhr.responseText).message);
+            responsePop('Error', JSON.parse(xhr.responseText).message, 'error', 'ok');
+        }
+    });
+}
+
+function fetchUserDebotRecord(user_id) {
+    $.ajax({
+        url: API_URL + "/transactions/debit/"+user_id,
+        method: "get",
+        contentType: "application/json",
+        success: function (data) {
+            if (data.status === 200) {
+                var aData = data.body;
+                populateDataTable('debitUserRecordTableId',aData);
+            }
+            console.log(data);
+        },
+        error: function (xhr, status, error) {
+            console.log('Ajax Error:', xhr.responseText);
+            responsePop('Error', error, 'error', 'ok');
+        }
+    });
+}
+
+function populateDataTable(tableId, data) {
+    $(`#${tableId}`).DataTable({
+        data: data,
+        destroy: true,
+        columns: [
+            {
+                data: null,
+                render: function (data, type, row, meta) {
+                    return `<span class="center-flex" style='font-size: 18px;'>${meta.row + meta.settings._iDisplayStart + 1}</span>`;
+                }
+            },
+            {
+                data: 'value',
+                render: function (data, type, row, meta) {
+                    return `<span class="center-flex" style='font-size: 18px;'>${data}</span>`;
+                }
+            },
+            {
+                data: 'transaction_status',
+                render: function (data, type, row, meta) {
+                    return `<span class="center-flex" style='font-size: 18px;'>${data}</span>`;
+                }
+            },
+            {
+                data: 'addedOn',
+                render: function (data, type, row, meta) {
+                    var dDate = new Date(data); // Corrected here
+                    // Format the date as per your requirement
+                    var formattedDate = `${dDate.getFullYear()}-${(dDate.getMonth() + 1).toString().padStart(2, '0')}-${dDate.getDate().toString().padStart(2, '0')}`;
+                    return `<span class="center-flex" style='font-size: 18px;'>${formattedDate}</span>`;
+                }
+            }
+        ]
+    });
+}
 
 
 function generateRandomCode() {

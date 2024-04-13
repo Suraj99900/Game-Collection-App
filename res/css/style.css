@@ -1385,6 +1385,7 @@ span.is-active-b {
 
 
 
+
 /* blog box */
 
 .blog .data-container {
@@ -1639,25 +1640,25 @@ td {
     color: var(--skin-color);
 }
 
-.dashboard main table {
+.custom-table table {
     width: 100%;
     text-align: left;
 }
 
-.dashboard main table th {
+.custom-table table th {
     font-size: 12px;
     background: var(--bg-black-50);
     padding: 0.8rem;
     color: var(--text-black-900);
 }
 
-.dashboard main table td {
+.custom-table table td {
     font-size: 12px;
     padding: 0.5rem;
     border-bottom: 1px solid var(--skin-color);
 }
 
-.dashboard main table tr:hover td {
+.custom-table table tr:hover td {
     background-color: var(--first-color);
     color: var(--text-black-900);
     cursor: default;
@@ -1723,20 +1724,20 @@ td a i {
         display: none;
     }
 
-    .dashboard main table tr {
+    .custom-table table tr {
         display: flex;
         flex-direction: column;
     }
 
-    .dashboard main table thead {
+    .custom-table table thead {
         display: none;
     }
 
-    .dashboard main table tr:nth-child(even) {
+    .custom-table table tr:nth-child(even) {
         background: var(--first-color);
     }
 
-    .dashboard main table tr:hover td {
+    .custom-table table tr:hover td {
         background: transparent;
     }
 }
@@ -2069,4 +2070,11 @@ td a i {
 
 #userWinRecordTable_wrapper{
     overflow-x: scroll;
+}
+
+@media (max-width: 1199px) {
+    .offcanvas-body {
+        overflow-y: auto; /* Allow vertical scrolling */
+        max-height: calc(100vh - 4rem); /* Adjust as needed to fit the viewport */
+    }
 }
