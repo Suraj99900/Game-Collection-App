@@ -11,6 +11,38 @@ if (session_status()) {
     $sUserMobileNo = $oSessionManager->sUserMobileNo;
 }
 ?>
+<style>
+    #bannerSliderId .modal-dialog {
+        width: 60%;
+        max-width: 60%;
+    }
+
+    /* #bannerSliderId .modal-content {
+        height: 60vh;
+    } */
+
+    #carouselExampleIndicators .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* For mobile devices */
+    @media (max-width: 768px) {
+        #bannerSliderId .modal-dialog {
+            width: 90%;
+            max-width: 90%;
+        }
+
+        #carouselExampleIndicators .carousel-inner img {
+            width: 100%;
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: contain;
+            /* Ensure the entire image is visible */
+        }
+    }
+</style>
 
 <body>
 
@@ -52,38 +84,38 @@ if (session_status()) {
                                     </div>
                                 </a>
                             </div>
-                            <?php if($bIsLogin == true) {?>
-                            <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
-                                <a href="winDashboard.php" class="card-body bg-card-low card-flex-column">
-                                    <div class="card-body text-center mt-5 ">
-                                        <i class="fa-solid fa-wine-glass-empty fa-lg"></i>
-                                    </div>
-                                    <div class="card-body text-center mt-3">
-                                        <h5 class="card-title-change">Win</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
-                                <a href="#" class="card-body bg-card-low card-flex-column">
-                                    <div class="card-body text-center mt-5 ">
-                                        <i class="fa-solid fa-dice fa-lg"></i>
-                                    </div>
-                                    <div class="card-body text-center mt-3">
-                                        <h5 class="card-title-change">Dice</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
-                                <a href="#" class="card-body bg-card-low card-flex-column">
-                                    <div class="card-body text-center mt-5 ">
-                                        <i class="fa-regular fa-hand-back-fist fa-lg"></i>
-                                    </div>
-                                    <div class="card-body text-center mt-3">
-                                        <h5 class="card-title-change">Luckyhit</h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <?php }?>
+                            <?php if ($bIsLogin == true) { ?>
+                                <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
+                                    <a href="winDashboard.php" class="card-body bg-card-low card-flex-column">
+                                        <div class="card-body text-center mt-5 ">
+                                            <i class="fa-solid fa-wine-glass-empty fa-lg"></i>
+                                        </div>
+                                        <div class="card-body text-center mt-3">
+                                            <h5 class="card-title-change">Win</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
+                                    <a href="#" class="card-body bg-card-low card-flex-column">
+                                        <div class="card-body text-center mt-5 ">
+                                            <i class="fa-solid fa-dice fa-lg"></i>
+                                        </div>
+                                        <div class="card-body text-center mt-3">
+                                            <h5 class="card-title-change">Dice</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
+                                    <a href="#" class="card-body bg-card-low card-flex-column">
+                                        <div class="card-body text-center mt-5 ">
+                                            <i class="fa-regular fa-hand-back-fist fa-lg"></i>
+                                        </div>
+                                        <div class="card-body text-center mt-3">
+                                            <h5 class="card-title-change">Luckyhit</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            <?php } ?>
                             <?php if (!$bIsLogin == true) { ?>
                                 <div class="card m-2 col-sm-12 col-md-6 col-lg-4  shadow bg-card-low" style="width: 20rem;">
                                     <a href="../view/loginScreen.php" class="card-body bg-card-low card-flex-column">
@@ -174,8 +206,39 @@ if (session_status()) {
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="bannerSliderId" tabindex="-1" aria-labelledby="bannerModalLabel" aria-hidden="true"
+        style="display: block;display: flex;align-content: center;justify-content: center;align-items: center;">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content bg-card-low">
+                <div class="modal-header bg-card-low">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-card-low">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators" id="carousel-indicators"></div>
+                        <div class="carousel-inner" id="carousel-inner"></div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <!-- manu toggler end -->
 
     <!-- include footer section -->
     <?php include_once "./CDN_Footer.php" ?>
-    <!-- <script src="../controller/SearchController.js"></script> -->
+    <script src="../controller/dashboardController.js"></script>

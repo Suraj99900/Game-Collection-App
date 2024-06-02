@@ -2,6 +2,8 @@
 // include header section of template
 include_once "./CDN_Header.php";
 include_once "./leftBar.php";
+
+$sReferCode = input::request('code') && input::request('code') != "" ? input::request('code'): "";
 ?>
 
 <!-- main Content start -->
@@ -42,6 +44,12 @@ include_once "./leftBar.php";
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <label for="UserPassword" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> Password</label>
                             <input type="password" class="form-control custom-control" id="userPasswordId" name="Password" placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-3">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <label for="referCode" class="form-label card-title-change"><i class="fa-solid fa-code fa-i"></i> Refer Code</label>
+                            <input type="text" class="form-control custom-control" id="referCodeId" name="referCode" value="<?php echo $sReferCode?>" placeholder="Enter refer Code (optional)">
                         </div>
                     </div>
                     <div class="row align-items-center p-3 hide" id="otpBoxId">

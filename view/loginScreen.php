@@ -31,7 +31,7 @@ include_once ABS_PATH_TO_PROJECT."view/leftBar.php";
             </div>
             <h3 class="contact-title padd-15 typing">Welcome G-Project </h3>
             <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5 rounded flex" style="position: relative;">
-                <form>
+                <form class="login-form">
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <label for="Number" class="form-label card-title-change"><i class="fa-solid fa-mobile-screen fa-i"></i> Phone number</label>

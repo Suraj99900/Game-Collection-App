@@ -322,12 +322,13 @@ if (!$bIsLogin) {
         <div class="vcard">
             <div class="appContent3 text-white crad">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="col-12 mb-1" style="font-size:20px; color:var(--text-black-900);">Available
-                            Balance:<br><br> <span id="balance"
-                                style="font-size: 30px;font-weight: bold;font-family:Fantasy;">
+                    <div class="col-12 p-5">
+                        <div class="col-12 mb-1" style="font-size:1.4rem; color:var(--text-black-900); font-weight: bold;font-family:Fantasy;">Available
+                            Balance: <span id="balance"
+                                style="font-size: 1.4rem;font-weight: bold;font-family:Fantasy;">
                                 
-                            </span></div>
+                            </span>
+                        </div>
                         <div class="col-12">
                             <div> <a href="manageWallet.php?iActive=3" class="btn btn-sm btn-primary m-0">Recharge</a>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rullModalID">Read
@@ -368,9 +369,9 @@ if (!$bIsLogin) {
                                 <h5 class='c-text-vl' id="periodParityID">20240213286</h5>
                             </div>
                             <div class="col">
-                                <div class="gameidtimer text-right">
-                                    <h5 class="mb-2"><i class="icon ion-md-timer"></i> Count Down</h5>
-                                    <h5 class="gbutton2" id="parityCount"></h5> <button type="button"
+                                <div class="gameidtimer text-right c-text">
+                                    <h5 class="mb-2 c-text"><i class="icon ion-md-timer"></i> Count Down</h5>
+                                    <h5 class="gbutton2 " id="parityCount"></h5> <button type="button"
                                         style="color:black;" href="javascript:void(0);" onclick="reloadbtn(77);"
                                         class="gbutton1 btn7" hidden=""><i
                                             class="fa fa-spinner fa-spin"></i>Loading</button>
@@ -714,8 +715,8 @@ if (!$bIsLogin) {
                     </h3>
                 </div>
                 <div class="collapse show mt-4 p-3" id="collapseAllId">
-                    <div class="card bg-card-low col">
-                        <h4 class="text-center">Today Record</h4>
+                    <div class="card bg-card-low col custom-table">
+                        <h4 class="text-center c-text">Today Record</h4>
                         <table id="allTransactionTable" class="display" style="width: 100%;">
                             <thead>
                                 <th>Peroid</th>
@@ -730,14 +731,14 @@ if (!$bIsLogin) {
                     <h3 class="col-lg-12 col-md-12 col-sm-12 mt-3" style="text-align: center;">
                         <a class="c-text badge" data-bs-toggle="collapse" href="#collapseUserWinRecordID" role="button"
                             aria-expanded="true" aria-controls="collapseUserWinRecordID" id="UserWinRecordID">
-                            User Win Record
+                            Win Loss Record
                         </a>
                     </h3>
                 </div>
 
                 <div class="collapse show mt-4 p-3" id="collapseUserWinRecordID">
-                    <div class="card bg-card-low col">
-                        <h4 class="text-center">User Win Record</h4>
+                    <div class="card bg-card-low col custom-table">
+                        <h4 class="text-center c-text">Win Loss  Record</h4>
                         <table id="userWinRecordTable" class="display" style="width: 100%;">
                             <thead>
                                 <th>Period</th>
@@ -751,16 +752,16 @@ if (!$bIsLogin) {
                     </div>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <h3 class="col-lg-12 col-md-12 col-sm-12 mt-3" style="text-align: center;">
                         <a class="c-text badge" data-bs-toggle="collapse" href="#collapseUserLossRecordID" role="button"
                             aria-expanded="true" aria-controls="collapseUserLossRecordID" id="UserLossRecordID">
                             User Loss Record
                         </a>
                     </h3>
-                </div>
+                </div> -->
 
-                <div class="collapse show mt-4 p-3" id="collapseUserLossRecordID">
+                <!-- <div class="collapse show mt-4 p-3" id="collapseUserLossRecordID">
                     <div class="card bg-card-low col">
                         <h4 class="text-center">User Loss Record</h4>
                         <table id="userLossRecordTable" class="display" style="width: 100%;">
@@ -773,7 +774,7 @@ if (!$bIsLogin) {
                             </thead>
                         </table>
                     </div>
-                </div>
+                </div> -->
                 
 
             </div>
@@ -791,7 +792,7 @@ if (!$bIsLogin) {
 <!-- OFFCanvas -->
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="addAmountId" aria-labelledby="addAmountLabel"
-    style="width: 50%;  overflow-y: auto;">
+    style="width: 100%;  overflow-y: auto;">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="addAmountLabel">Apply Amount</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

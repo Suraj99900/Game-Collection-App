@@ -69,12 +69,12 @@ if (!$bIsLogin) {
                             <h5>User Debit </h5>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="ReportComplaintsSuggetion.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
-                            <h5>Report/Complaints & Suggetion</h5>
+                    <li>
+                        <a href="bannerManagement.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                            <h5>Banner Management</h5>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="about.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
                             <h5>About</h5>
                         </a>

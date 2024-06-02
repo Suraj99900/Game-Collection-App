@@ -23,7 +23,7 @@ if (!$bIsLogin) {
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
                 <li class="breadcrumb-item"><a href="adminDashboard.php"> Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Staff Dashboard</li>
+                <li class="breadcrumb-item active" aria-current="page">Banner Management</li>
             </ol>
         </nav>
 
@@ -31,7 +31,7 @@ if (!$bIsLogin) {
             <!-- Dashboard Section form  start-->
             <div class="row">
                 <div class="section-title padd-15">
-                    <h2>Staff Dashboard</h2>
+                    <h2>Banner Management</h2>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@ if (!$bIsLogin) {
                         </a>
                     </li>
                     <li>
-                        <a href="adminStaff.php?iActive=3" class="shadow-lg p-3 mb-5 rounded active"><i
+                        <a href="adminStaff.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-arrow-rotate-left"></i>
                             <h5>Manage Staff</h5>
                         </a>
@@ -71,7 +71,7 @@ if (!$bIsLogin) {
                         </a>
                     </li>
                     <li>
-                        <a href="bannerManagement.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                        <a href="bannerManagement.php?iActive=3" class="shadow-lg p-3 mb-5 rounded active"><i class="fa-solid fa-tarp"></i>
                             <h5>Banner Management</h5>
                         </a>
                     </li>
@@ -89,17 +89,18 @@ if (!$bIsLogin) {
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <a class="btn btn-primary float-end mx-2 my-4" data-bs-toggle="offcanvas"
                                 href="#offcanvasAddStaff" role="button" aria-controls="offcanvasAddStaff">
-                                <i class="fa-solid fa-plus"></i> Add Staff
+                                <i class="fa-solid fa-plus"></i> Add Banner
                             </a>
                         </div>
                     </div>
                     <div class="card col custom-table">
-                        <h4 class="text-center">Manage Staff</h4>
-                        <table id="allStaffTableId" class="display" style="width: 100%;">
+                        <h4 class="text-center">Banner Management</h4>
+                        <table id="allBannerTableId" class="display" style="width: 100%;">
                             <thead>
                                 <th class="text-center">Sr. no</th>
                                 <th class="text-center">Name</th>
-                                <th class="text-center">Phone Number</th>
+                                <th class="text-center">File</th>
+                                <th class="text-center">Date/Time</th>
                                 <th class="text-center">Action</th>
                             </thead>
                         </table>
@@ -115,7 +116,7 @@ if (!$bIsLogin) {
 <div class="offcanvas offcanvas-end bg-card-high" tabindex="-1" id="offcanvasAddStaff"
     aria-labelledby="offcanvasAddStaffLabel" style="width: 60%;">
     <div class="offcanvas-header">
-        <h3 class="offcanvas-title c-text" id="offcanvasAddStaffLabel">Add Staff</h3>
+        <h3 class="offcanvas-title c-text" id="offcanvasAddStaffLabel">Add Banner</h3>
         <i data-bs-dismiss="offcanvas" aria-label="Close"
             class="c-text btn-close text-reset btn c-text fa-solid fa-circle-xmark" style="font-size: 1.5rem;"></i>
     </div>
@@ -126,61 +127,24 @@ if (!$bIsLogin) {
                 <form>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffName" class="form-label card-title-change"><i
-                                    class="fa-solid fa-Staff fa-i"></i> Staff Name</label>
-                            <input type="text" class="form-control custom-control " id="StaffNameId" name="name"
-                                placeholder="Enter StaffName">
+                            <label for="BannerName" class="form-label card-title-change"><i
+                                    class="fa-solid fa-Staff fa-i"></i>Banner Name</label>
+                            <input type="text" class="form-control custom-control " id="BannerNameId" name="name"
+                                placeholder="Enter Banner Name">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="Number" class="form-label card-title-change"><i
-                                    class="fa-solid fa-mobile-screen fa-i"></i> Phone number</label>
-                            <input type="number" class="form-control custom-control" id="phoneNumberId"
-                                name="phoneNumber" placeholder="Enter Phone number">
+                            <label for="uploadBannerFile" class="form-label card-title-change"><i
+                                    class="fa-solid fa-Staff fa-i"></i>Banner Image</label>
+                            <input type="file" class="form-control custom-control " id="BannerFileId" name="name"
+                                placeholder="Enter File">
                         </div>
                     </div>
-                    <div class="row align-items-center p-3">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffPassword" class="form-label card-title-change"><i
-                                    class="fa-solid fa-lock fa-i"></i> Password</label>
-                            <input type="password" class="form-control custom-control" id="StaffPasswordId"
-                                name="Password" placeholder="Enter Password">
-                        </div>
-                    </div>
-                    <div class="row align-items-center p-3">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffKey" class="form-label card-title-change"><i
-                                    class="fa-solid fa-lock fa-i"></i> Key</label>
-                            <input type="text" class="form-control custom-control" id="StaffKeyId" name="Key"
-                                placeholder="Enter Key">
-                        </div>
-                    </div>
-                    <div class="row align-items-center p-3">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffPassword" class="form-label card-title-change"><i
-                                    class="fa-solid fa-lock fa-i"></i> UserType</label>
-                            <select class="form-select custom-control c-text-vl" id="staffTypeId" name="type">
-                                <option value="0" selected>Select option</option>
-                                <option value="1">Super User</option>
-                                <option value="2">Admin</option>
-                                <option value="3">Game Staff</option>
-                                <option value="4">Payment Staff</option>
-                                <option value="5">Staff</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row align-items-center p-3 hide" id="otpBoxId">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="otp" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i>
-                                OTP</label>
-                            <input type="text" class="form-control custom-control" id="otpId" name="otp"
-                                placeholder="Enter otp">
-                        </div>
-                    </div>
+                    
 
                     <div class="flex search-btn mt-5">
-                        <a id="idRegisterAdmin" class="btn sendOTP mb-4">Submit</a>
+                        <a id="idBannerFile" class="btn mb-4">Submit</a>
                     </div>
                 </form>
             </div>
@@ -188,35 +152,6 @@ if (!$bIsLogin) {
     </div>
 </div>
 
-<div class="offcanvas offcanvas-end bg-card-high" tabindex="-1" id="offcanvasUpdateStaff"
-    aria-labelledby="offcanvasUpdateStaffLabel" style="width: 60%;">
-    <div class="offcanvas-header">
-        <h3 class="offcanvas-title c-text" id="offcanvasUpdateStaffLabel">Update Staff Name</h3>
-        <i data-bs-dismiss="offcanvas" aria-label="Close"
-            class="c-text btn-close text-reset btn c-text fa-solid fa-circle-xmark" style="font-size: 1.5rem;"></i>
-    </div>
-    <div class="offcanvas-body bg-card-high">
-        <div class="shadow-lg p-sm-1 p-md-2 p-lg-5 mb-lg-5 mb-md-5 mb-sm-2 bg-card-high rounded">
-            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5  rounded flex"
-                style="position: relative;">
-                <form>
-                    <div class="row align-items-center p-3">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffName" class="form-label card-title-change"><i
-                                    class="fa-solid fa-Staff fa-i"></i> Staff Name</label>
-                            <input type="text" class="form-control custom-control " id="UpdateStaffNameId" name="name"
-                                placeholder="Enter StaffName">
-                        </div>
-                    </div>
-
-                    <div class="flex search-btn mt-5">
-                        <a id="idUpdateAdmin" class="btn sendOTP mb-4">Submit</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -263,5 +198,4 @@ include_once "./ADMIN_CDN_Footer.php";
     var iStaffID = "<?php echo $iStaffId; ?>"
 </script>
 
-<script src="../../controller/adminRegisterController.js"></script>
-<script src="../../controller/adminStaffController.js"></script>
+<script src="../../controller/BannerFileController.js"></script>

@@ -25,7 +25,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 100%;
     font-family: 'Poppins' sans-serif;
 }
 
@@ -64,7 +64,7 @@ a {
     bottom: 0;
     height: 100%;
     width: 100%;
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 ul {
@@ -74,7 +74,11 @@ ul {
 li {
 
     color: var(--text-black-700);
-    font-size: 18px;
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.2rem;
 }
 
 
@@ -264,7 +268,7 @@ li {
 }
 
 .btn {
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: 500;
     padding: 7px 25px;
     color: white;
@@ -277,7 +281,7 @@ li {
 }
 
 .btn-active{
-    font-size: 16px;
+    font-size: 1.3rem;
     font-weight: 500;
     padding: 7px 25px;
     color: white;
@@ -290,7 +294,7 @@ li {
 }
 
 .btn-small {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 200;
     padding: 5px 12px;
     color: white;
@@ -303,16 +307,17 @@ li {
 }
 
 .fa-i {
-    font-size: 0.8rem;
-    padding: 5px 40px;
+    font-size: 1.2rem;
+    padding: 3px 8px;
     padding-left: 30px;
-    display: inline-block;
-    white-space: nowrap;
-    border: none;
-    border-radius: 40px;
+    /* display: inline-block; */
+    /* white-space: nowrap; */
+    /* border: none; */
+    /* border-radius: 40px; */
     transition: all 0.3 ease;
-    color: var(--bg-black-50);
-    background: var(--skin-color);
+    /* color: var(--bg-black-50); */
+    /* background: var(--skin-color); */
+    color: var(--skin-color);
 }
 
 .fa-i:hover {
@@ -330,7 +335,7 @@ li {
 
 .auth {
     width: 190px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .login {
@@ -364,7 +369,7 @@ li {
 .aside .logo {
     position: absolute;
     top: 50px;
-    font-size: 30px;
+    font-size: 3rem;
     text-transform: capitalize;
     left: 40px;
 }
@@ -373,14 +378,14 @@ li {
     color: var(--text-black-900);
     font-weight: 700;
     padding: 30px 50px;
-    font-size: 30px;
+    font-size: 3rem;
     letter-spacing: 5px;
     position: relative;
 }
 
 .aside .logo a span {
     font-family: 'Clicker Script', cursive;
-    font-size: 40px;
+    font-size: 3rem;
 }
 
 .aside .logo a::before {
@@ -460,7 +465,7 @@ li {
 }
 
 .aside .nav li a {
-    font-size: 16px;
+    font-size: 1.3rem;
     font-weight: 600;
     display: block;
     color: var(--text-black-900);
@@ -491,19 +496,19 @@ li {
 }
 
 h3.hello {
-    font-size: 28px;
+    font-size: 2.3rem;
     margin: 15px 0;
 }
 
 h3.hello span {
     font-family: 'Clicker Script', cursive;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--skin-color);
 }
 
 h3.my-profession {
-    font-size: 30px;
+    font-size: 3rem;
     margin: 15px 0;
 }
 
@@ -513,7 +518,7 @@ h3.my-profession {
 
 .home-info p {
     margin-bottom: 70px;
-    font-size: 20px;
+    font-size: 2rem;
     color: var(--text-black-700);
 }
 
@@ -569,7 +574,7 @@ h3.my-profession {
 }
 
 .about .about-content .about-text h3 {
-    font-size: 24px;
+    font-size: 2rem;
     margin-bottom: 15px;
     font-weight: 700;
     color: var(--text-black-900);
@@ -582,7 +587,7 @@ h3.my-profession {
 
 .about .about-content .about-text p {
     color: var(--text-black-900);
-    font-size: 16px;
+    font-size: 1.3rem;
     line-height: 25px;
 }
 
@@ -600,7 +605,7 @@ h3.my-profession {
 .about .about-content .personal-info .info-item p {
     font-weight: 600;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 1.3rem;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
 }
@@ -636,7 +641,7 @@ h3.my-profession {
 
 .about .about-content .skills .skill-item h5 {
     line-height: 40px;
-    font-size: 16px;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-black-900);
     text-transform: capitalize;
@@ -681,7 +686,7 @@ h3.my-profession {
 }
 
 .about .about-content h3.title {
-    font-size: 24px;
+    font-size: 1.3rem;
     margin-bottom: 30px;
     font-weight: 700;
     color: var(--text-black-900);
@@ -737,7 +742,7 @@ h3.my-profession {
 
 .about .about-content .timeline .timeline-date {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1rem;
     margin-bottom: 12px;
     color: var(--text-black-700);
 }
@@ -748,7 +753,7 @@ h3.my-profession {
 
 .about .about-content .timeline .timeline-title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.3rem;
     margin-bottom: 15px;
     text-transform: capitalize;
     color: var(--text-black-900);
@@ -756,7 +761,7 @@ h3.my-profession {
 
 .about .about-content .timeline .timeline-text {
     line-height: 25px;
-    font-size: 16px;
+    font-size: 1.3rem;
     text-align: justify;
     color: var(--text-black-700);
 }
@@ -1627,7 +1632,7 @@ td {
 .dashboard main h2 {
     margin: 0 0 2rem 0;
     line-height: 1;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--skin-color);
 }
 
@@ -1673,6 +1678,9 @@ td a i {
 
 
 @media (max-width:1199px) {
+    html{
+        font-size: 82%;
+    }
     .toggler-box {
         visibility: visible;
     }
@@ -1744,6 +1752,18 @@ td a i {
 
 @media (max-width:991px) {
 
+    html{
+        font-size: 62%;
+    }
+
+    .section {
+        padding: 0 5px;
+    }
+
+    .Wallet-container{
+        padding: 0 3rem;
+    }
+
     .aside {
         transition: all 1s ease-in-out;
     }
@@ -1790,6 +1810,21 @@ td a i {
 
 @media (max-width:767px) {
 
+    html{
+        font-size: 42%;
+    }
+    .userInfo{
+        padding: 0;
+    }
+
+    .form-label{
+        font-size: 1.2rem;
+    }
+
+    form .custom-control {
+        font-size: 1.2rem;
+    }
+
     .blog-page .data-content {
         border: 0px;
     }
@@ -1804,14 +1839,14 @@ td a i {
     
     .grid-item {
         padding: 20px;
-        font-size: 30px;
+        font-size: 3rem;
         text-align: center;
     }
 
 
     .info-data table th,
     td {
-        font-size: 12px;
+        font-size: 1rem;
         padding: 5px;
         margin: 0 0px;
         /* color: var(--text-black-700); */
@@ -1848,7 +1883,7 @@ td a i {
     }
 
     .about .about-content .personal-info .info-item p span {
-        font-size: 10px;
+        font-size: 1rem;
     }
 
     .gallery .collection__gallery .item {
@@ -1902,17 +1937,17 @@ td a i {
 
     .dashboard .sidebar__toggle {
         display: inline-block;
-        background: var(--first-color);
-        color: var(--text-black-900);
+        background: var(--text-black-900);
+        color: var(--bg-black-900);
         position: fixed;
         right: 0;
-        top: 12rem;
+        top: 50rem;
         z-index: 1;
-        width: 2.5rem;
+        width: 3.5rem;
         border-radius: 50% 0 0 50%;
-        font-size: 1.3rem;
+        font-size: 3.3rem;
         cursor: pointer;
-        box-shadow: -1rem 0 2rem rgba(0, 0, 0, 0.4);
+        box-shadow: -1rem 0 2rem rgba(0, 0, 0, 0.123);
     }
 
     .dashboard aside a h5 {
@@ -2003,6 +2038,7 @@ td a i {
 #complitedReportId,
 #allTransactionTable,
 #successfulTransactionTable,
+#userWinRecordTable,
 #failTransactionTable {
     background: var(--bg-black-50) !important;
 }
@@ -2046,7 +2082,7 @@ td a i {
 
 .grid-item {
     padding: 20px;
-    font-size: 30px;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -2077,4 +2113,8 @@ td a i {
         overflow-y: auto; /* Allow vertical scrolling */
         max-height: calc(100vh - 4rem); /* Adjust as needed to fit the viewport */
     }
+}
+
+.login-form{
+    padding: 0 1rem;
 }

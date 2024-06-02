@@ -84,6 +84,12 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                             <h5>About</h5>
                         </a>
                     </li>
+                    <li>
+                        <a href="sharedScreen.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                                class="fa-solid fa-tarp"></i>
+                            <h5>Refer and Earn</h5>
+                        </a>
+                    </li>
                 </ul>
             </aside>
 
@@ -108,7 +114,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 
                     </div>
                     <div class="collapse show mt-4 p-3" id="collapseAllId">
-                        <div class="card ">
+                        <div class="card custom-table">
                             <h4 class="text-center">COMPLETED</h4>
 
                             <table id="complitedReportId" class="display" style="width: 100%;">
@@ -124,7 +130,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         </div>
                     </div>
                     <div class="collapse mt-4 p-3" id="collapseSuccessfulId">
-                        <div class="card ">
+                        <div class="card custom-table">
                             <h4 class="text-center">PENDDING</h4>
 
                             <table id="PendingReportId" class="display" style="width: 100%;">
@@ -151,7 +157,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         <div class="offcanvas-body bg-card-low">
                             <div class="shadow-lg p-sm-1 p-md-2 p-lg-5 mb-lg-5 mb-md-5 mb-sm-2 bg-card-low rounded">
                                 <div>
-                                    <div class="row align-items-center p-3">
+                                    <div class="row align-items-center px-5">
                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
                                             <label for="type" class="form-label c-text-vl"><i
                                                     class="fa-solid fa-signature"></i> Type</label>
@@ -178,7 +184,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                                                 name="email" placeholder="Enter Email">
                                         </div>
                                     </div>
-                                    <div class="row align-items-center p-3">
+                                    <div class="row align-items-center px-5">
                                         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
                                             <label for="PhomneNumber" class="form-label c-text-vl"><i
                                                     class="fa-solid fa-envelope"></i> Phone Number</label>

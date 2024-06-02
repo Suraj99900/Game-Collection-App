@@ -83,14 +83,20 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                             <h5>About</h5>
                         </a>
                     </li>
+                    <li>
+                        <a href="sharedScreen.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                                class="fa-solid fa-tarp"></i>
+                            <h5>Refer and Earn</h5>
+                        </a>
+                    </li>
                 </ul>
             </aside>
 
             <main>
                 <div class="card shadow bg-card-low col userInfo padd-15">
-                    <div class="mb-3 mt-3  row">
+                    <div class="mb-3 mt-3 row px-5">
                         <h2 class=''> Current Balance</h2>
-                        <div class="col ml-5 mt-2 p-2form-control-plaintext c-text-vl m-2 p-2 flex-item">
+                        <div class="col ml-5 mt-2 form-control-plaintext c-text-vl m-2 flex-item">
                             <i class="fa-solid fa-wallet fa-lg m-1 p-2"></i>
                             <h3 class="form-control-plaintext c-text-vl m-2 p-2" style=" display: inline;"> <input
                                     type="text" readonly class="form-control-plaintext c-text-vl"
@@ -101,7 +107,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 
                 <div class="card shadow bg-card-low col userInfo padd-15 mt-5">
                     <div class="mb-3 mt-3 row-lg-6 row-md-6 row-sm-12">
-                        <div class="row">
+                        <div class="row px-5">
                             <div class="col">
                                 <h2 class='form-control-plaintext c-text-vl m-2 p-2'> Credit / Withdraw</h2>
                             </div>
@@ -112,7 +118,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                                 </a>
                             </div>
                         </div>
-                        <div class="container text-center">
+                        <div class="container text-center Wallet-container">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-6 card bg-card-high">
 

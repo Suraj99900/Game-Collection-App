@@ -24,36 +24,61 @@ include_once "./adminLeftBar.php";
                     <h2>Admin Registration</h2>
                 </div>
             </div>
-            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5  rounded flex" style="position: relative;">
+            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5  rounded flex"
+                style="position: relative;">
                 <form>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffName" class="form-label card-title-change"><i class="fa-solid fa-Staff fa-i"></i> Staff Name</label>
-                            <input type="text" class="form-control custom-control " id="StaffNameId" name="name" placeholder="Enter StaffName">
+                            <label for="StaffName" class="form-label card-title-change"><i
+                                    class="fa-solid fa-Staff fa-i"></i> Staff Name</label>
+                            <input type="text" class="form-control custom-control " id="StaffNameId" name="name"
+                                placeholder="Enter StaffName">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="Number" class="form-label card-title-change"><i class="fa-solid fa-mobile-screen fa-i"></i> Phone number</label>
-                            <input type="number" class="form-control custom-control" id="phoneNumberId" name="phoneNumber" placeholder="Enter Phone number">
+                            <label for="Number" class="form-label card-title-change"><i
+                                    class="fa-solid fa-mobile-screen fa-i"></i> Phone number</label>
+                            <input type="number" class="form-control custom-control" id="phoneNumberId"
+                                name="phoneNumber" placeholder="Enter Phone number">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffPassword" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> Password</label>
-                            <input type="password" class="form-control custom-control" id="StaffPasswordId" name="Password" placeholder="Enter Password">
+                            <label for="StaffPassword" class="form-label card-title-change"><i
+                                    class="fa-solid fa-lock fa-i"></i> Password</label>
+                            <input type="password" class="form-control custom-control" id="StaffPasswordId"
+                                name="Password" placeholder="Enter Password">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="StaffKey" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> Key</label>
-                            <input type="text" class="form-control custom-control" id="StaffKeyId" name="Key" placeholder="Enter Key">
+                            <label for="StaffPassword" class="form-label card-title-change"><i
+                                    class="fa-solid fa-lock fa-i"></i> UserType</label>
+                            <select class="form-select custom-control c-text-vl" id="staffTypeId" name="type">
+                                <option value="0" selected>Select option</option>
+                                <option value="1">Super User</option>
+                                <option value="2">Admin</option>
+                                <option value="3">Game Staff</option>
+                                <option value="4">Payment Staff</option>
+                                <option value="5">Staff</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-3">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <label for="StaffKey" class="form-label card-title-change"><i
+                                    class="fa-solid fa-lock fa-i"></i> Key</label>
+                            <input type="text" class="form-control custom-control" id="StaffKeyId" name="Key"
+                                placeholder="Enter Key">
                         </div>
                     </div>
                     <div class="row align-items-center p-3 hide" id="otpBoxId">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="otp" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> OTP</label>
-                            <input type="text" class="form-control custom-control" id="otpId" name="otp" placeholder="Enter otp">
+                            <label for="otp" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i>
+                                OTP</label>
+                            <input type="text" class="form-control custom-control" id="otpId" name="otp"
+                                placeholder="Enter otp">
                         </div>
                     </div>
 
@@ -113,4 +138,3 @@ include_once "./ADMIN_CDN_Footer.php";
 ?>
 
 <script src="../../controller/adminRegisterController.js"></script>
-

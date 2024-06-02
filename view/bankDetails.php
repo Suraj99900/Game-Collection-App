@@ -82,12 +82,18 @@ if (!$bIsLogin) {
                             <h5>About</h5>
                         </a>
                     </li>
+                    <li>
+                        <a href="sharedScreen.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                                class="fa-solid fa-tarp"></i>
+                            <h5>Refer and Earn</h5>
+                        </a>
+                    </li>
                 </ul>
             </aside>
 
             <main>
                 <div class="card shadow bg-card-low col userInfo padd-15">
-                    <div class="mb-3 mt-3  row">
+                    <div class="mb-3 mt-3 row px-5">
                         <h2 class=''> Bank Details</h2>
                         <div class="col ml-5 mt-2 p-2 form-control-plaintext c-text-vl m-2 p-2 flex-item"
                             style="justify-content: left;">
@@ -125,7 +131,7 @@ if (!$bIsLogin) {
                                                 class="shadow-lg p-sm-1 p-md-2 p-lg-5 mb-lg-5 mb-md-5 mb-sm-2 bg-card-low rounded">
                                                 <form>
                                                     <div class="row align-items-center p-3" id="accountDetailsId">
-                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3 px-5">
                                                             <label for="actualName" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Actual
                                                                 Name</label>
@@ -134,7 +140,7 @@ if (!$bIsLogin) {
                                                                 id="actualName" name="actualName"
                                                                 placeholder="Enter Actual Name">
                                                         </div>
-                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3 px-5">
                                                             <label for="ifscCode" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-hashtag"></i> IFSC Code</label>
                                                             <input type="text"
@@ -142,18 +148,18 @@ if (!$bIsLogin) {
                                                                 id="ifscCode" name="ifscCode"
                                                                 placeholder="Enter IFSC Code">
                                                         </div>
-                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3 px-5">
                                                             <label for="accountNumber" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-hashtag"></i> Account
                                                                 Number</label>
-                                                            <input type="number" class="form-select custom-control"
+                                                            <input type="number" class="form-control custom-control"
                                                                 id="accountNumber" name="accountNumber"
                                                                 placeholder="Enter Account Number">
                                                         </div>
                                                     </div>
 
                                                     <div class="row align-items-center p-3">
-                                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 px-5">
                                                             <label for="bankName" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Bank Name</label>
                                                             <input type="text"
@@ -161,14 +167,14 @@ if (!$bIsLogin) {
                                                                 id="bankName" name="bankName"
                                                                 placeholder="Enter Bank Name">
                                                         </div>
-                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3 px-5">
                                                             <label for="state" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> State</label>
                                                             <input type="text"
                                                                 class="form-control custom-control c-text-vl" id="state"
                                                                 name="state" placeholder="Enter State">
                                                         </div>
-                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3 px-5">
                                                             <label for="city" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> City</label>
                                                             <input type="text"
@@ -178,14 +184,14 @@ if (!$bIsLogin) {
                                                     </div>
 
                                                     <div class="row align-items-center p-3">
-                                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 px-5">
                                                             <label for="address" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Address</label>
                                                             <input type="text"
                                                                 class="form-control custom-control c-text-vl"
                                                                 id="address" name="address" placeholder="Enter Address">
                                                         </div>
-                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3 px-5">
                                                             <label for="mobileNumber" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Mobile
                                                                 No.</label>
@@ -194,7 +200,7 @@ if (!$bIsLogin) {
                                                                 id="mobileNumber" name="mobileNumber"
                                                                 placeholder="Enter Mobile No.">
                                                         </div>
-                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3 px-5">
                                                             <label for="email" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Email</label>
                                                             <input type="text"
@@ -204,14 +210,14 @@ if (!$bIsLogin) {
                                                     </div>
 
                                                     <div class="row align-items-center p-3">
-                                                        <div class="col-sm-12 col-md-6 col-lg-4">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 px-5">
                                                             <label for="upiId" class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> UPI Id</label>
                                                             <input type="text"
                                                                 class="form-control custom-control c-text-vl" id="upiId"
                                                                 name="upiId" placeholder="Enter UPI Id">
                                                         </div>
-                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+                                                        <div class="col-sm-12 col-md-6 col-lg-4 my-3 px-5">
                                                             <label for="verificationCode"
                                                                 class="form-label c-text-vl"><i
                                                                     class="fa-solid fa-signature"></i> Verification

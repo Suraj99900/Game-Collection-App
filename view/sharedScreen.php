@@ -25,15 +25,14 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
                 <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Account Security</li>
+                <li class="breadcrumb-item active" aria-current="page">Refer and Earn</li>
             </ol>
         </nav>
-
         <div class="">
             <!-- Dashboard Section form  start-->
             <div class="row">
                 <div class="section-title padd-15">
-                    <h2>Account Security</h2>
+                    <h2>Refer and Earn</h2>
                 </div>
             </div>
         </div>
@@ -43,19 +42,19 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
             <aside>
                 <ul>
                     <li>
-                        <a href="userDashboard.php" class="shadow-lg p-3 mb-5 rounded "><i
+                        <a href="userDashboard.php?iActive=3" class="shadow-lg p-3 mb-5 rounded "><i
                                 class="fa-regular fa-id-card"></i>
                             <h5>Personal Info</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageWallet.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                        <a href="manageWallet.php" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-arrow-rotate-left"></i>
                             <h5>Wallet</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="bankDetails.php?iActive=3" class="shadow-lg p-3 mb-5 rounded "><i
+                        <a href="bankDetails.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-book-open-reader"></i>
                             <h5>Bank Details</h5>
                         </a>
@@ -67,7 +66,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         </a>
                     </li>
                     <li>
-                        <a href="accountSecurity.php?iActive=3" class="shadow-lg p-3 mb-5 rounded active"><i
+                        <a href="accountSecurity.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
                                 class="fa-solid fa-tarp"></i>
                             <h5>Account Security</h5>
                         </a>
@@ -85,7 +84,7 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
                         </a>
                     </li>
                     <li>
-                        <a href="sharedScreen.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                        <a href="sharedScreen.php?iActive=3" class="shadow-lg p-3 mb-5 rounded active"><i
                                 class="fa-solid fa-tarp"></i>
                             <h5>Refer and Earn</h5>
                         </a>
@@ -94,43 +93,29 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
             </aside>
 
             <main>
-                <div class="card shadow bg-card-low col userInfo padd-15 px-3">
-                    <div class="mb-3 mt-3  row">
-                        <h2 class='mx-3 px-3 '> Reset Password</h2>
-                        <div class="row align-items-center mx-2 px-2">
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="mobileNo" class="form-label c-text-vl"><i class="fa-solid fa-signature"></i>
-                                    Mobile No</label>
-                                <input type="number" class="form-control custom-control c-text-vl" id="phoneNoId"
-                                    name="phoneNo" placeholder="Enter Phone Number">
-                            </div>
-
-                            <div class="col-sm-12 col-md-6 col-lg-3">
-                                <label for="verifyCode" class="form-label c-text-vl"><i
-                                        class="fa-solid fa-signature"></i>
-                                    Verify Code</label>
-                                <input type="text" class="form-control custom-control c-text-vl" id="verifyCodeId"
-                                    name="verifyCode" placeholder="Enter OTP">
-                            </div>
-                            <div class="col-sm-12 col-md-3 col-lg-3 mt-4">
-                                <button class="btn btn-primary" id="otpGenrateId" type="button">
-                                    OTP
-                                </button>
-                            </div>
-
-                            <div class="col-sm-12 col-md-6 col-lg-12 mt-3">
-                                <label for="newPassword" class="form-label c-text-vl"><i
-                                        class="fa-solid fa-signature"></i>
-                                    New Password</label>
-                                <input type="text" class="form-control custom-control c-text-vl" id="newPasswordId"
-                                    name="newPassword" placeholder="Enter New Password">
-                            </div>
-
-                            <div class="flex search-btn mt-5 text-center">
-                                <a id="idResetButton" class="btn search mb-1">Reset Password</a>
-                            </div>
+                <div class="card shadow bg-card-low col userInfo padd-15">
+                    <div class="card-header">
+                        <h4 class="card-title">Refer and Earn</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Share your unique referral link and earn rewards!</p>
+                        <div class="container center card m-2" style="display: flex; align-items: center;">
+                            <img src="../res/img/refral_and_shared.png" style="width: 40%;">
                         </div>
-
+                        <form>
+                            <div class="mb-3">
+                                <label for="referralLink" class="form-label">Your Referral Link</label>
+                                <input type="text" class="form-control" id="referralLinkId" readonly
+                                    value="<?php echo ABS_URL ?>refer?code=2345">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="copyToClipboard()">Copy Link</button>
+                        </form>
+                        <div class="social-share mt-4">
+                            <p>Share on:</p>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" class="btn btn-danger" id="facebookShareId">Facebook</a>
+                            <a href="https://api.whatsapp.com/send?text=" class="btn btn-danger" target="_blank"  id="whatsAppShareId" >WhatsApp</a>
+                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new= " class="btn btn-danger"  target="_blank" id="emailShareId">Email</a>
+                        </div>
                     </div>
                 </div>
 
@@ -141,9 +126,6 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 
 </div>
 <!-- main Content end-->
-
-
-
 
 <!-- style switcher start -->
 <div class="style-switcher">
@@ -182,12 +164,18 @@ $RAZORPAY_KEY_ID = RAZORPAY_KEY_ID;
 <?php
 include_once "./CDN_Footer.php";
 ?>
-
-
 <script>
-    var RAZORPAY_KEY_ID = "<?php echo RAZORPAY_KEY_ID ?>";
     var iUserID = "<?php echo $iUserID ?>";
-    var sUserName = "    <?php echo $sUserName ?>";
+    var sUserName = "<?php echo $sUserName ?>";
     var sUserMobileNo = "<?php echo $sUserMobileNo ?>";
+    var ABS_URL = "<?php echo ABS_URL ?>";
+
+    function copyToClipboard() {
+        var copyText = document.getElementById("referralLinkId");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+        navigator.clipboard.writeText(copyText.value);
+        alert("Copied to clipboard: " + copyText.value);
+    }
 </script>
-<script src="../controller/accountSecurityController.js"></script>
+<script src="../controller/sharedScreenController.js"></script>

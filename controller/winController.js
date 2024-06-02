@@ -123,7 +123,7 @@ function activatClickEvent() {
         } else {
             // Handle the case when buttonType is a color string
             color = gcolor.replace(/\s/g, '').toLowerCase(); // Assuming the color string is in lowercase
-            number = generateRandomNumber(color);
+            number = "";//generateRandomNumber(color);
         }
 
         $.ajax({
@@ -286,10 +286,10 @@ function start_count_down() {
         s = n % 10;
     var minutes = Math.floor(i);
     var seconds = ('0' + Math.floor(n)).slice(-2);
-    document.getElementById("parityCount").innerHTML = "<span class='timer'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer'>" + seconds + "</span>";
-    document.getElementById("sapreCount").innerHTML = "<span class='timer'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer'>" + seconds + "</span>";
-    document.getElementById("bconeCount").innerHTML = "<span class='timer'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer'>" + seconds + "</span>";
-    document.getElementById("emerdCount").innerHTML = "<span class='timer'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer'>" + seconds + "</span>";
+    document.getElementById("parityCount").innerHTML = "<span class='timer c-text'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer c-text'>" + seconds + "</span>";
+    document.getElementById("sapreCount").innerHTML = "<span class='timer c-text'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer c-text'>" + seconds + "</span>";
+    document.getElementById("bconeCount").innerHTML = "<span class='timer c-text'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer c-text'>" + seconds + "</span>";
+    document.getElementById("emerdCount").innerHTML = "<span class='timer c-text'>0" + Math.floor(minutes) + "</span>" + "<span>:</span>" + "<span class='timer c-text'>" + seconds + "</span>";
     if (distance == 179) {
         console.log(gType);
         fetchWinRecordData(gType);
@@ -405,7 +405,7 @@ function fetchWinRecordData(type) {
 
 function fetchUserWinRecord(sType) {
     $.ajax({
-        url: API_URL + "/games/win-game/userbet?gameType=" + sType + "&user_id=" + iUserID,
+        url: API_URL + "/games/win-game/userbet/win-loss?gameType=" + sType + "&user_id=" + iUserID,
         type: 'GET',
         success: function (response) {
             var aData = response.data;
@@ -416,7 +416,7 @@ function fetchUserWinRecord(sType) {
                 order: [[0, 'desc']],
                 columns: [
                     {
-                        data: 'gameDetails[0].period',
+                        data: 'period',
                         className: 'text-center' // Center align the text
                     },
                     {
@@ -427,7 +427,7 @@ function fetchUserWinRecord(sType) {
                         data: 'number',
                         className: 'text-center', // Center align the text
                         render: function (data, type, row) {
-                            return `<span style="color: ${row.color};">${data}</span>`;
+                            return `<span style="color: ${row.color};">${(data != null ? data: "-")}</span>`;
                         }
                     },
                     {
@@ -442,8 +442,12 @@ function fetchUserWinRecord(sType) {
                         className: 'text-center' // Center align the text
                     },
                     {
-                        data: 'winAmount',
-                        className: 'text-center' // Center align the text
+                        data: 'isWinData.winAmount',
+                        className: 'text-center',// Center align the text
+                        render: function (data) {
+                            console.log();
+                            return `<span style="color: ${data == null?"red":"green"};">${data == null?"Loss":data}</span>`;
+                        }
                     }
                 ]
             });

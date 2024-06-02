@@ -71,12 +71,12 @@ if (!$bIsLogin) {
                             <h5>User Debit </h5>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="ReportComplaintsSuggetion.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
-                            <h5>Report/Complaints & Suggetion</h5>
+                    <li>
+                        <a href="bannerManagement.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                            <h5>Banner Management</h5>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="about.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
                             <h5>About</h5>
                         </a>
@@ -95,7 +95,7 @@ if (!$bIsLogin) {
                             </div>
                         </div>
                     </div>
-                    <div class="card col">
+                    <div class="card col custom-table">
                         <h4 class="text-center">Win Game Manage</h4>
                         <table id="allWinGameTableId" class="display" style="width: 100%;">
                             <thead>
@@ -120,6 +120,43 @@ if (!$bIsLogin) {
 </div>
 <!-- main Content end-->
 
+
+<div class="offcanvas offcanvas-end bg-card-high" tabindex="-1" id="offcanvasUpdateWin"
+    aria-labelledby="offcanvasUpdateWinLabel" style="width: 60%;">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title c-text" id="offcanvasUpdateWinLabel">Update Win Record</h3>
+        <i data-bs-dismiss="offcanvas" aria-label="Close"
+            class="c-text btn-close text-reset btn c-text fa-solid fa-circle-xmark" style="font-size: 1.5rem;"></i>
+    </div>
+    <div class="offcanvas-body bg-card-high">
+        <div class="shadow-lg p-sm-1 p-md-2 p-lg-5 mb-lg-5 mb-md-5 mb-sm-2 bg-card-high rounded">
+            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5 rounded flex"
+                style="position: relative;">
+                <form>
+                    <div class="row align-items-center p-3">
+                        <div class="col-sm-12 col-md-12 col-lg-12 mb-3">
+                            <label for="ColorTypeId" class="form-label card-title-change">
+                                <i class="fa-solid fa-color fa-i"></i> Color Type 
+                            </label>
+                            <select class="form-control custom-control" id="ColorTypeId" name="ColorType">
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 mb-3">
+                            <label for="WinType" class="form-label card-title-change">
+                                <i class="fa-solid fa-trophy fa-i"></i> Number
+                            </label>
+                            <select class="form-control custom-control" id="numberId" name="number">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex search-btn mt-5">
+                        <button type="submit" id="idUpdateColorNumber" class="btn sendOTP mb-4">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- style switcher start -->

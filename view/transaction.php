@@ -80,6 +80,12 @@ if (!$bIsLogin) {
                             <h5>About</h5>
                         </a>
                     </li>
+                    <li>
+                        <a href="sharedScreen.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                                class="fa-solid fa-tarp"></i>
+                            <h5>Refer and Earn</h5>
+                        </a>
+                    </li>
                 </ul>
             </aside>
 
@@ -102,7 +108,7 @@ if (!$bIsLogin) {
                                 Fail Order
                             </a></h3>
                     </div>
-                    <div class="collapse show mt-4 p-3" id="collapseAllId">
+                    <div class="collapse show mt-4 p-3 custom-table" id="collapseAllId">
                         <div class="card">
                             <h4 class="text-center">All Transaction</h4>
                             <table id="allTransactionTable" class="display" style="width: 100%;">
@@ -116,7 +122,7 @@ if (!$bIsLogin) {
                         </div>
                     </div>
 
-                    <div class="collapse mt-4 p-3" id="collapseSuccessfulId">
+                    <div class="collapse mt-4 p-3 custom-table" id="collapseSuccessfulId">
                         <div class="card">
                             <h4 class="text-center">Successful Transaction</h4>
                             <table id="successfulTransactionTable" class="display" style="width: 100%;">
@@ -130,7 +136,7 @@ if (!$bIsLogin) {
                         </div>
                     </div>
 
-                    <div class="collapse mt-4 p-3" id="collapseFailId">
+                    <div class="collapse mt-4 p-3 custom-table" id="collapseFailId">
                         <div class="card">
                             <h4 class="text-center">Fail Transaction</h4>
                             <table id="failTransactionTable" class="display" style="width: 100%;">

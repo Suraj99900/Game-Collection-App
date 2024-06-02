@@ -5,6 +5,9 @@ const AdminRegistration = async () => {
     const sKey = document.getElementById('StaffKeyId').value;
     const sOTP = document.getElementById('otpId').value;
     const otpBoxElement = document.getElementById('otpBoxId');
+    var selectedOption = $('#staffTypeId option:selected');
+    const sStaffTypeName =  selectedOption.text();
+    const iStaffType = selectedOption.val();
 
     if (sOTP === '') {
         try {
@@ -43,6 +46,8 @@ const AdminRegistration = async () => {
                     phoneNumber: sPhoneNumber,
                     otp: sOTP,
                     key: sKey,
+                    staffType:iStaffType,
+                    staffTypeName:sStaffTypeName,
                     password: sPassword,
                 }),
             });
@@ -53,13 +58,13 @@ const AdminRegistration = async () => {
                 responsePop('Success', data.message, 'success', 'ok');
                 otpBoxElement.classList.add('show');
                 otpBoxElement.classList.remove('hide');
-                window.location.href = "../view/admin/adminLoginScreen.php.php";
+                window.location.href = "../admin/adminLoginScreen.php";
             } else {
                 responsePop('Error', data.message, 'error', 'ok');
             }
         } catch (error) {
             console.log('Fetch error:', error);
-            esponsePop('Error', 'An error occurred while making the request.', 'error', 'ok');
+            responsePop('Error', 'An error occurred while making the request.', 'error', 'ok');
         }
     }
 }

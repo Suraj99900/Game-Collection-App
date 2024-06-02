@@ -70,12 +70,12 @@ if (!$bIsLogin) {
                             <h5>User Debit </h5>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="ReportComplaintsSuggetion.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
-                            <h5>Report/Complaints & Suggetion</h5>
+                    <li>
+                        <a href="bannerManagement.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
+                            <h5>Banner Management</h5>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="about.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-tarp"></i>
                             <h5>About</h5>
                         </a>
@@ -113,7 +113,7 @@ if (!$bIsLogin) {
         <i data-bs-dismiss="offcanvas" aria-label="Close"
             class="c-text btn-close text-reset btn c-text fa-solid fa-circle-xmark" style="font-size: 1.5rem;"></i>
     </div>
-    <div class="offcanvas-body bg-card-high ">
+    <div class="offcanvas-body bg-card-high " style="overflow-y: auto; max-height: calc(100vh - 4rem);">
         <div class="shadow-lg p-sm-1 p-md-2 p-lg-5 mb-lg-5 mb-md-5 mb-sm-2 bg-card-high rounded">
             <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5  rounded flex"
                 style="position: relative;">

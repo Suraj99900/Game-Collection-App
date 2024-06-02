@@ -80,6 +80,12 @@ if (!$bIsLogin) {
                             <h5>About</h5>
                         </a>
                     </li>
+                    <li>
+                        <a href="sharedScreen.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                                class="fa-solid fa-tarp"></i>
+                            <h5>Refer and Earn</h5>
+                        </a>
+                    </li>
                 </ul>
             </aside>
 

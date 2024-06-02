@@ -75,11 +75,17 @@ if (!$bIsLogin) {
                             <h5>About</h5>
                         </a>
                     </li>
+                    <li>
+                        <a href="sharedScreen.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i
+                                class="fa-solid fa-tarp"></i>
+                            <h5>Refer and Earn</h5>
+                        </a>
+                    </li>
                 </ul>
             </aside>
 
             <main>
-                <div class="card shadow bg-card-low row userInfo padd-15">
+                <div class="card shadow bg-card-low row userInfo padd-15 px-5">
                     <div class="mb-3 row">
                         <label for="ID" class="col-sm-4 col-form-label c-text"><b>ID:</b> </label>
                         <div class="col-sm-6">
