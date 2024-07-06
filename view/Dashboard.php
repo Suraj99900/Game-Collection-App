@@ -3,7 +3,11 @@
 require_once "../config.php";
 include_once ABS_PATH_TO_PROJECT . "view/CDN_Header.php";
 include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
-
+if (LIFE_HEALER_ENABLE == true) {
+    session_destroy();
+    header("Location: " . LIFE_HEALER_INDEX_LOCATION, true, 301);
+    exit();
+}
 if (session_status()) {
     $bIsLogin = $oSessionManager->isLoggedIn ? $oSessionManager->isLoggedIn : false;
     $iUserID = $oSessionManager->iUserID;

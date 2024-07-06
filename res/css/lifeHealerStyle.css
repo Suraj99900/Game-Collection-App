@@ -1,0 +1,126 @@
+.main-content {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dashboard_container {
+    background: url("../img/LifeHealer/mohamed-nohassi-odxB5oIG_iA-unsplash.jpg") fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backface-visibility: visible;
+    display: block !important;
+}
+
+.main-box {
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--bg-black-900);
+    color: white;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.card-transparent {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+}
+
+.card-black-transparent {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: white;
+}
+.lead{
+    text-align: justify;
+}
+.lead-text {
+    text-align: center;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+}
+
+.img-box {
+    width: 50%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+.ffbtntxt {
+    font-size: 1.2rem;
+}
+
+.red-flag{
+    color: red;
+    font-size: 18px;
+}
+
+.timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+}
+
+.card-imag{
+    width: 50%;
+}
+.card-imag img {
+    width: 100%;
+}
+
+li{
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: red;
+}
+
+.carousel-inner .carousel-item img {
+    max-height: 400px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.carousel-inner .carousel-item .p-4 {
+    text-align: left;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #000;
+    border-radius: 50%;
+}
+
+
+
+@media (max-width:991px) {
+
+    html{
+        font-size: 62%;
+    }
+
+}
+
+@media (max-width:767px) {
+
+    html{
+        font-size: 42%;
+    }
+
+    .img-box {
+        width: auto;
+    }
+    
+}
