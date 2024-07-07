@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Life Healer Kavita</title>
+    <title>Life Healer Kavita - 10X Your Power of Manifestation</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../res/img/LifeHealer/appicon.png" type="image/x-icon">
@@ -13,26 +13,26 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Life Healer offers holistic health solutions to help you achieve physical, mental, and spiritual wellness. Join us for a journey towards a healthier you.">
+        content="Life Healer offers holistic health solutions to achieve physical, mental, and spiritual wellness. Join us for a healthier you.">
     <meta name="keywords"
-        content="holistic health, wellness, life healing, spiritual wellness, mental health, physical health">
+        content="holistic health, wellness, life healing, spiritual wellness, mental health, physical health, manifestation, career growth, success">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.lifehealerkavita.com/">
+    <link rel="canonical" href="https://lifehealerkavita.com">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Life Healer Kavita">
+    <meta property="og:title" content="Life Healer Kavita - 10X Your Power of Manifestation">
     <meta property="og:description"
-        content="Life Healer offers holistic health solutions to help you achieve physical, mental, and spiritual wellness. Join us for a journey towards a healthier you.">
+        content="Life Healer offers holistic health solutions to achieve physical, mental, and spiritual wellness. Join us for a healthier you.">
     <meta property="og:image" content="../res/img/LifeHealer/appicon.png">
-    <meta property="og:url" content="https://www.lifehealerkavita.com/">
+    <meta property="og:url" content="https://lifehealerkavita.com">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Life Healer Kavita">
+    <meta name="twitter:title" content="Life Healer Kavita - 10X Your Power of Manifestation">
     <meta name="twitter:description"
-        content="Life Healer offers holistic health solutions to help you achieve physical, mental, and spiritual wellness. Join us for a journey towards a healthier you.">
-    <meta name="twitter:image" content="https://www.lifehealerkavita.com/res/img/LifeHealer/appicon.png">
+        content="Life Healer offers holistic health solutions to achieve physical, mental, and spiritual wellness. Join us for a healthier you.">
+    <meta name="twitter:image" content="../res/img/LifeHealer/appicon.png">
 
     <!-- CDNS -->
     <!-- Bootstrap 5 link -->
@@ -63,4 +63,4 @@
 
 </head>
 
-<body></body>
+<body>

@@ -19,15 +19,15 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
         <div class="dashboard dashboard_container p-5 mt-5">
             <div class="card-transparent shadow-lg p-4 rounded ">
                 <div class="row justify-content-center">
-                    <div class="main-box col-12 text-center mb-4">
-                        <h2 class="font-weight-bold fs-1">10X Your Power Of Manifestation Within 2 Hours</h2>
-                    </div>
+                    <header class="main-box col-12 text-center mb-4">
+                        <h1 class="font-weight-bold fs-1">10X Your Power Of Manifestation Within 2 Hours</h1>
+                    </header>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <p class="admin-text lead-text">Unlock your true potential by learning powerful manifestation
+                        <h1 class="admin-text lead-text">Unlock your true potential by learning powerful manifestation
                             techniques that can transform your life in just 2 hours. Join us for an enlightening session
-                            that will change your approach to achieving your goals.</p>
+                            that will change your approach to achieving your goals.</h1>
                     </div>
                 </div>
                 <div class="card-black-transparent">
