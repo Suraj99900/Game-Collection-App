@@ -1,7 +1,7 @@
 <?php
 // include header section of template
-require_once "../../config.php";
-include_once ABS_PATH_TO_PROJECT . "./view/LifeHealer/HEADER.php";
+require_once "../config.php";
+include_once "./Header.php";
 if (LIFE_HEALER_ENABLE == false) {
     header("Location: " . INDEX_LOCATION, true, 301);
     exit();
@@ -65,7 +65,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-8 col-sm-12 img-box p-5">
-                            <img src="../../res/img/LifeHealer/user1.png" class="img-fluid rounded" alt="Manifestation">
+                            <img src="../res/img/LifeHealer/user1.png" class="img-fluid rounded" alt="Manifestation">
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                 <div class="card-transparent p-2 m-2">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-12 card-imag">
-                            <img src="../../res/img/LifeHealer/user2.jpg" alt="मास्टरक्लास">
+                            <img src="../res/img/LifeHealer/user2.jpg" alt="मास्टरक्लास">
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 20px;">
                             <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5 rounded flex"
@@ -255,7 +255,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
     </section>
 </div>
 <!-- include footer section -->
-<?php include_once ABS_PATH_TO_PROJECT . "./view/LifeHealer/Footer.php"; ?>
+<?php include_once "./Footer.php"; ?>
 <script>
     // Set the date we're counting down to
     var countDownDate = new Date("<?php echo $eventYear; ?>-<?php echo $eventMonth; ?>-<?php echo $eventDay; ?> <?php echo $eventHour; ?>:<?php echo $eventMinute; ?>:00").getTime();

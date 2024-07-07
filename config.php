@@ -16,7 +16,7 @@ define('ADMIN_INDEX_LOCATION','http://localhost/project/Game-Collection-App/view
 define('RAZORPAY_KEY_ID','rzp_test_maTowvalNvA422');
 
 // Life Healer URL
-define('LIFE_HEALER_INDEX_LOCATION','http://localhost/project/Game-Collection-App/view/LifeHealer/index.php');
+define('LIFE_HEALER_INDEX_LOCATION','http://localhost/project/Game-Collection-App/LifeHealer/index.php');
 define('LIFE_HEALER_ENABLE',true);
 
 define('EVENT_YEAR',2024);
