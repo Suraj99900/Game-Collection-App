@@ -20,7 +20,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
             <div class="card-transparent shadow-lg p-4 rounded ">
                 <div class="row justify-content-center">
                     <div class="main-box col-12 text-center mb-4">
-                        <h2 class="font-weight-bold">10X Your Power Of Manifestation Within 2 Hours</h2>
+                        <h2 class="font-weight-bold fs-1">10X Your Power Of Manifestation Within 2 Hours</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -61,6 +61,12 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                                     <div class="text-center">
                                         <span class=""> Only Few Seat Left !</span>
                                     </div>
+
+                                    <div class="text-center p-5">
+                                        <a type="button" class="btn btn-primary fs-5" data-bs-toggle="modal"
+                                            data-bs-target="#ContactUsId"><i class="fa-solid fa-id-badge"></i> Contact
+                                            Us</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -73,8 +79,6 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
         </div>
 
         <div class="row p-5 mt-5">
-
-
             <div class="card-black-transparent mb-4">
                 <h3 class="text-center p-2">जीवनात यशस्वी होण्यासाठी तयार करा तुमच्या जिंकण्याची मानसिकता आमच्या बरोबर!
                 </h3>
@@ -251,9 +255,309 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
 
 
             </div>
+
+            <div class="card-black-transparent mb-4">
+                <h3 class="text-center p-2">वरील सर्व प्रश्नांना तुमचे उत्तर होय असल्यास, तुमच्या इच्छा जलद, सर्वांगीण
+                    मार्गाने पूर्ण करण्यासाठी माझ्याकडे एक Secret फॉर्म्युला (यश आणि आनंदासाठी एक जादुई ब्लूप्रिंट) आहे.
+                </h3>
+                <h3 class="text-center p-2">माझ्याबद्दल थोडक्यात</h3>
+
+                <div class="card-transparent p-2 m-2">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 20px;">
+                            <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5 rounded flex"
+                                style="position: relative;">
+                                <div class="flex">
+                                    <h3 class="text-center" style="color:red;">Unicorn Coach Kavita Jadhav</h3>
+                                    <p class="p-2" style="text-align: justify;">Hello I am Kavita your Life
+                                        Transformation Coach who uses positive psychology to help people design their
+                                        best life.I am known for my groundbreaking work in the areas of discipline,
+                                        happiness, clarity, and success.I have been featured in the Hindustan Times,
+                                        Business World, and Business Standard for my contribution to impacting people’s
+                                        lives.Founder of the Rise n Shine Morning Manifestation Achiever’s Club, I have
+                                        till now helped over 4000+ men & women to discover their best performing selves
+                                        & built a community of over 30k people.Ii want to contribute into the peoples
+                                        lives to change their mind set for their career growth personal well being and
+                                        many more aspect i am on a mission to help a million more people to have a
+                                        relaxing & flourishing life in 2024 and beyond.The ones who achieve big do not
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 card-Video">
+                            <div class="video-container">
+                                <video controls autoplay loop muted>
+                                    <source src="../res/img/LifeHealer/user_video_1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <section class="service section " id="service">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Bonuses You’ll Get In This Masterclass worth ₹5000/-</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- section item start -->
+                    <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon img-box">
+                                <img src="../res/img/LifeHealer/b_1.png" alt="bonus 1" srcset="bonus 1">
+                            </div>
+                            <h4>BONUS 1</h4>
+                            <h4>प्रतिज्ञाकरण (Affirmation) eBook</h4>
+                            <ul class="bonus-li">
+                                <li>वैयक्तिकृत प्रतिज्ञा (Affirmations)
+                                </li>
+                                <li>आरोग्य प्रतिज्ञा / Health Affirmation
+                                </li>
+                                <li>प्रेम आणि नाते प्रतिज्ञा / Love & Relationship Affirmations
+                                </li>
+                                <li>
+                                    करिअर आणि पैसा प्रतिज्ञा / Career & Money Affirmations
+                                </li>
+                                <li>सामान्य प्रतिज्ञा / General Affirmations
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- service item end -->
+
+                    <!-- section item start -->
+                    <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon img-box">
+                                <img src="../res/img/LifeHealer/b_2.png" alt="bonus 1" srcset="bonus 1">
+                            </div>
+                            <h4>BONUS 2</h4>
+                            <h4>कृतज्ञता (Gratitude) & उपचार संगीत/Healing Music</h4>
+                            <ul class="bonus-li">
+                                <li>
+                                    365 कृतज्ञता प्रॉम्प्ट/ 365 Gratitude Prompts
+                                </li>
+                                <li>432 Hz उपचार संगीत/ Healing Music
+                                </li>
+                                <li>528 Hz यश संगीत/ Success Music
+                                </li>
+                                <li>
+                                    WhatsApp समुदायात प्रवेश/ Access to Liked Mind Community
+                                </li>
+                                <li>युनिक व्हिजन बोर्ड (Vision Board)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- service item end -->
+
+                    <!-- section item start -->
+                    <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon img-box">
+                                <img src="../res/img/LifeHealer/b_3.png" alt="bonus 1" srcset="bonus 1">
+                            </div>
+                            <h4>BONUS 3</h4>
+                            <h4>अतिरिक्त बोनस/ Additional Bonus</h4>
+                            <ul class="bonus-li">
+                                <li>
+                                    एक दिवस फ्री माइंड GYM पास/ One Day Free Mind GYM Pass
+                                </li>
+                                <li>मॅनिफेस्टिंग झूम पार्टीमध्ये प्रवेश/ Access to Manifesting Zoom Party
+                                </li>
+                                <li>मोफत 1:1 सल्लामसलत करण्याची संधी/ Chance to get a Free 1:1 Consultation
+                                </li>
+                                <li>
+                                    मॅनिफेस्टेशन मोबाइल अनुप्रयोग माहिती मिळवा (Access to Manifestation Mobile
+                                    Applications)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- service item end -->
+                    <div class="card-black-transparent">
+                        <div class="Timer row flex justify-content-center">
+                            <div class="row justify-content-center">
+                                <h3 style="text-align: center;">Only Few Seats Left!</h3>
+                            </div>
+                            <div id="countdown"></div>
+                            <div class="text-center p-5">
+                                <a class="btn btn-primary btn-lg" href="https://rzp.io/i/KNhuciEeUM" target="_blank">
+                                    <span class="ffbtntxt"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                        Join US Only 99/-<br />तुमचे स्थान राखा @केवळ ९९/- वर.
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </section>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="ContactUsId" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content bg-card-low">
+            <div class="modal-header bg-card-low">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-card-low">
+                <!-- Contact section start -->
+                <section class="contact section  " id="contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="section-title padd-15">
+                                <h2>Contact Us</h2>
+                            </div>
+                        </div>
+                        <h3 class="contact-title padd-15">Have you any Question ?</h3>
+                        <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+                        <div class="row">
+                            <!-- contact info item start -->
+                            <div class="contact-info-item padd-15">
+                                <div class="icon"><i class="fa fa-phone"></i></div>
+                                <h4>Call Us On</h4>
+                                <p>+91 7666692367</p>
+                            </div>
+                            <!-- contact info item end -->
+
+                            <!-- contact info item start -->
+                            <div class="contact-info-item padd-15">
+                                <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                                <h4>Address</h4>
+                                <p> Narhe Gaon ,Pune, Maharashtra</p>
+                            </div>
+                            <!-- contact info item end -->
+
+                            <!-- contact info item start -->
+                            <div class="contact-info-item padd-15">
+                                <div class="icon"><i class="fa fa-envelope"></i></div>
+                                <h4>Email</h4>
+                                <p>healling.reanaissance @lifehealerkavita.com</p>
+                            </div>
+                            <!-- contact info item end -->
+
+                            <!-- contact info item start -->
+                            <div class="contact-info-item padd-15">
+                                <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                                <h4>Website</h4>
+                                <p>www.lifehealerkavita.com</p>
+                            </div>
+                            <!-- contact info item end -->
+                        </div>
+                        <h3 class="contact-title padd-15">SEND ME EMAIL</h3>
+                        <h4 class="contact-sub-title padd-15">I'M VERY RESPOSIVE TO MESSAGES</h4>
+
+                        <!-- CONTACT FORM -->
+                        <div class="row">
+                            <div class="contact-form padd-15">
+                                <div class="row">
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Subject">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <textarea name="" class="form-control" id=""
+                                                placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15 ">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn fs-4"> Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- Contact section end -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- starting banner modal -->
+
+<div class="modal fade" id="bannerSliderId" tabindex="-1" aria-labelledby="bannerModalLabel" aria-hidden="true"
+    style="display: block;display: flex;align-content: center;justify-content: center;align-items: center;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content bg-card-low">
+            <div class="modal-header bg-card-low">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-card-low">
+                <div class="card-black-transparent">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="col-lg-12 col-md-12 col-sm-12 card-imag" style="width: 100% ;">
+                                <img src="../res/img/LifeHealer/user3.jpg" alt="मास्टरक्लास">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="Timer row flex justify-content-center">
+                                <div class="row justify-content-center">
+                                    <h3 style="text-align: center;">Only Few Seats Left!</h3>
+                                </div>
+                                <div class="text-center p-5">
+                                    <h3>
+                                        Register Now to Manifest Your Dream <br>
+                                        <span style="font-size: 16px;" class="red-flag">Live Masterclass on</span>
+                                    </h3>
+                                </div>
+                                <div class="text-center">
+                                    <div id="timermodal" class="timer"></div>
+                                </div>
+                                <div class="text-center p-5">
+                                    <a class="btn btn-primary btn-lg" href="https://rzp.io/i/KNhuciEeUM"
+                                        target="_blank">
+                                        <span class="ffbtntxt"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                            Join US Only 99/-<br />तुमचे स्थान राखा @केवळ ९९/- वर.
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- include footer section -->
 <?php include_once "./Footer.php"; ?>
 <script>
@@ -278,6 +582,8 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
         // Display the result in the element with id="timer"
         document.getElementById("timer").innerHTML = `<i class="fa-solid fa-calendar-days"></i> ` + days + "d " + hours + "h "
             + minutes + "m " + seconds + "s ";
+        document.getElementById("timermodal").innerHTML = `<i class="fa-solid fa-calendar-days"></i> ` + days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
 
         // If the count down is over, write some text
         if (distance < 0) {
@@ -285,4 +591,39 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
             document.getElementById("timer").innerHTML = "EXPIRED";
         }
     }, 1000);
+
+    // Set the countdown time in seconds
+    let countdownMinTime = 29;
+    let countdownSecondTime = 60;
+    // Function to update the countdown
+    function updateCountdown() {
+        const countdownElement = document.getElementById('countdown');
+
+        // Update countdown content
+        countdownElement.innerHTML = `<div class='card-black-transparent flex text-center fs-1' style='color:red;'><i class="fa-solid fa-hourglass-end"></i> <span class = 'round-timer'>${countdownMinTime} MINUTES</span> : <span class = 'round-timer'>${countdownSecondTime} SECONDS</span></div>`;
+        countdownSecondTime--;
+
+        // Check and update minutes if seconds reach below 0
+        if (countdownSecondTime < 0) {
+            countdownMinTime--;
+            countdownSecondTime = 59; // Reset seconds to 59
+        }
+
+        // Check if countdown has reached 0
+        if (countdownMinTime < 0) {
+            clearInterval(timer);
+            countdownElement.innerHTML = 'EXPIRED';
+        }
+    }
+
+
+
+
+    $(document).ready(() => {
+        $('#bannerSliderId').modal('show');
+
+        // Call updateCountdown every second
+        updateCountdown(); // Initial call
+        let timer = setInterval(updateCountdown, 1000);
+    });
 </script>

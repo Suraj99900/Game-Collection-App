@@ -32,9 +32,11 @@
     padding: 20px;
     color: white;
 }
-.lead{
+
+.lead {
     text-align: justify;
 }
+
 .lead-text {
     text-align: center;
     font-size: 1.8rem;
@@ -64,7 +66,7 @@
     font-size: 1.2rem;
 }
 
-.red-flag{
+.red-flag {
     color: red;
     font-size: 18px;
 }
@@ -75,14 +77,15 @@
     color: red;
 }
 
-.card-imag{
+.card-imag {
     width: 50%;
 }
+
 .card-imag img {
     width: 100%;
 }
 
-li{
+li {
     font-size: 1.5rem;
     padding: 1rem;
     color: red;
@@ -98,29 +101,67 @@ li{
     text-align: left;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     background-color: #000;
     border-radius: 50%;
 }
 
+.card-Video {
+    width: 50%;
+    margin: auto;
+}
 
+.video-container{
+    width: 100%;
+    padding: 0rem 1rem;
+}
+
+.video-container video{
+    width: 100%;
+    padding: 1rem 2rem;
+}
+.card-Video source {
+    width: 100%;
+}
+
+
+.bonus-li li{
+    font-size: 0.8rem ;
+}
+
+.round-timer{
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    font-weight: bold;
+}
 
 @media (max-width:991px) {
 
-    html{
+    html {
         font-size: 62%;
+    }
+
+    .bonus-li li{
+        font-size: 1.5rem;
     }
 
 }
 
 @media (max-width:767px) {
 
-    html{
+    html {
         font-size: 42%;
     }
 
     .img-box {
         width: auto;
     }
+
+    .card-Video {
+        width: 100%;
+    }
     
+
 }
