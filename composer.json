@@ -1,0 +1,6 @@
+{
+    "require": {
+        "doctrine/dbal": "^4.0",
+        "tinymce/tinymce": "^7.2"
+    }
+}

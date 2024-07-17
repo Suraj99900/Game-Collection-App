@@ -3,12 +3,12 @@
 define('DB_CONNECTION', 'mysql');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '3306');
-define('DB_DATABASE', 'app_linen_laundry');
+define('DB_DATABASE', 'app_samrtpoly');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'plus91');
+define('DB_PASSWORD', 'root');
 define('API_KEY', 'your-api-key-here');
 define('DEBUG_MODE', true);
-define('API_URL','http://localhost:8000/api');
+define('API_URL','http://localhost/project/Game-Collection-App/');
 define("ABS_PATH_TO_PROJECT","D:\\InstalledApp\\Xampp\\htdocs\\project\\Game-Collection-App\\");
 define('ABS_URL','http://localhost/project/Game-Collection-App/');
 define('INDEX_LOCATION','http://localhost/project/Game-Collection-App/view/Dashboard.php');
@@ -24,3 +24,11 @@ define('EVENT_MONTH',07);
 define('EVENT_DAY',10);
 define('EVENT_HOUR',11);
 define('EVENT_MINUTE',59);
+
+// Project Name Configuration
+define("FIRST_NAME","S");
+define("OTHER_NAME","uraj");
+
+// PortFolio
+define('MYPORTFOLIO_INDEX_LOCATION','http://localhost/project/Game-Collection-App/view/MyPortfolio.php');
+define('MYPORTFOLIO_ENABLE',true);

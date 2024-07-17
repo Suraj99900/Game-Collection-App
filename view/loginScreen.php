@@ -34,8 +34,8 @@ include_once ABS_PATH_TO_PROJECT."view/leftBar.php";
                 <form class="login-form">
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="Number" class="form-label card-title-change"><i class="fa-solid fa-mobile-screen fa-i"></i> Phone number</label>
-                            <input type="number" class="form-control custom-control" id="phoneNumberId" name="phoneNumber" placeholder="Enter Phone number">
+                            <label for="Username" class="form-label card-title-change"><i class="fa-solid fa-mobile-screen fa-i"></i> Username</label>
+                            <input type="text" class="form-control custom-control" id="UsernameId" name="phoneUsername" placeholder="Enter Phone Username">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
@@ -105,4 +105,4 @@ include_once "./CDN_Footer.php";
     setInterval(typeing, 150);
 </script>
 
-<script src="../controller/LoginController.js"></script>
+<script src="../controller/poxLoginRegisterController.js"></script>

@@ -15,7 +15,7 @@ $iActive = isset($_GET['iActive']) ? $_GET['iActive'] : '';
     <!-- aside start  -->
     <div class="aside">
         <div class="logo">
-            <a href="#" style="font-size: 14px;"><span>G</span>-Project</a>
+            <a href="#" style="font-size: 14px;"><span><?php echo FIRST_NAME?></span><?php echo OTHER_NAME?></a>
         </div>
 
         <div class="nav-toggler">

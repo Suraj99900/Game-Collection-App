@@ -1,9 +1,9 @@
 // Main API URL
-var API_URL = "http://localhost:3000/api";
+var API_URL = "'http://localhost/project/Game-Collection-App";
 
 // =============== types
 const typed = document.querySelector(".typing");
-const string_data = ["Welcome to G-Project", "Explore G-Project", "Discover a World of G-Project"];
+const string_data = ["Welcome to samrtpoly", "Explore samrtpoly", "Discover a world of samrtpoly"];
 let ixd = 1;
 let i = 0;
 
@@ -22,6 +22,7 @@ function typeing() {
     }
 }
 
+setInterval(typeing, 150)
 
 
 

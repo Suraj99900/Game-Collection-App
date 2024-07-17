@@ -11,10 +11,11 @@ $bIsLogin = $oSessionManager->isLoggedIn ? $oSessionManager->isLoggedIn : false;
 if (!$bIsLogin) {
     header("Location: loginScreen.php", true, 301);
     exit;
-}else{
+} else {
     $iUserID = $oSessionManager->iUserID;
 }
 ?>
+
 
 <!-- main Content start -->
 <div class="main-content">
@@ -23,7 +24,7 @@ if (!$bIsLogin) {
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb pt-4">
                 <li class="breadcrumb-item"><a href="Dashboard.php"> Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
+                <li class="breadcrumb-item active" aria-current="page">Blog Manage</li>
             </ol>
         </nav>
 
@@ -31,7 +32,7 @@ if (!$bIsLogin) {
             <!-- Dashboard Section form  start-->
             <div class="row">
                 <div class="section-title padd-15">
-                    <h2>User Dashboard</h2>
+                    <h2>Blog Manage</h2>
                 </div>
             </div>
         </div>
@@ -41,43 +42,42 @@ if (!$bIsLogin) {
             <aside>
                 <ul>
                     <li>
-                        <a href="userDashboard.php" class="shadow-lg p-3 mb-5 rounded active"><i class="fa-regular fa-id-card"></i>
+                        <a href="userDashboard.php" class="shadow-lg p-3 mb-5 rounded "><i
+                                class="fa-regular fa-id-card"></i>
                             <h5>Personal Info</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="BlogManage.php?iActive=3" class="shadow-lg p-3 mb-5 rounded"><i class="fa-solid fa-blog"></i>
+                        <a href="BlogManage.php?iActive=3" class="shadow-lg p-3 mb-5 rounded active"><i
+                                class="fa-solid fa-blog"></i>
                             <h5>Blog</h5>
                         </a>
                     </li>
-                    
+
                 </ul>
             </aside>
 
             <main>
                 <div class="card shadow bg-card-low row userInfo padd-15 px-5">
-                    <div class="mb-3 row">
-                        <label for="ID" class="col-sm-4 col-form-label c-text"><b>ID:</b> </label>
-                        <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext c-text-vl" id="userID" value="">
+                    <div class="row my-3">
+                        <div class="col-12 float-right">
+                            <a href="./addBlogPage.php" type="button" class="btn btn-primary float-end"> Add blog</a>
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <label for="MobileNumber" class="col-sm-4 col-form-label c-text"><b>Mobile:</b> </label>
-                        <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext c-text-vl" id="mobileNumberID" value="">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="UserName" class="col-sm-4 col-form-label c-text"><b>UserName:</b> </label>
-                        <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext c-text-vl" id="userNameId" value="">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="Balance" class="col-sm-4 col-form-label c-text"><b>User Type:</b> </label>
-                        <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext c-text-vl" id="balanceID" value="">
+
+                    <div class="row mt-2">
+                        <div class="col12">
+                            <div class="card custom-table">
+                                <h4 class="text-center">Manage Blog</h4>
+                                <table id="blogManageTable" class="display" style="width: 100%;">
+                                    <thead>
+                                        <th>Sr No</th>
+                                        <th>Title</th>
+                                        <th>Author Name</th>
+                                        <th>Action</th>
+                                    </thead>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,14 +102,17 @@ if (!$bIsLogin) {
                 <div class="row align-items-center p-3">
                     <div class="col-sm-12 col-md-6 col-lg-6">
                         <!-- <label class="form-label"><i class="fa-solid fa-user"></i>Select Student</label> -->
-                        <select class="form-control custom-control" id="studentNameId" name="student" placeholder="Select Student" style="width: 100%;">
+                        <select class="form-control custom-control" id="studentNameId" name="student"
+                            placeholder="Select Student" style="width: 100%;">
                             <!-- Options will be dynamically added using JavaScript -->
                         </select>
                         <input type="hidden" class="form-control custom-control" id="bookId" name="bookId">
-                        <input type="hidden" class="form-control custom-control" id="userId" name="user_name" value="<?php echo $_SESSION['username'] ?>">
+                        <input type="hidden" class="form-control custom-control" id="userId" name="user_name"
+                            value="<?php echo $_SESSION['username'] ?>">
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <select class="form-control custom-control" id="bookNameID" name="bookName" placeholder="Select Book" style="width: 100%;">
+                        <select class="form-control custom-control" id="bookNameID" name="bookName"
+                            placeholder="Select Book" style="width: 100%;">
                             <!-- Options will be dynamically added using JavaScript -->
                         </select>
                     </div>
@@ -165,6 +168,7 @@ include_once "./CDN_Footer.php";
 <script>
     var ABS_URL = '<?php echo ABS_URL ?>';
     var iUserID = "<?php echo $iUserID; ?>"
+    var iId;
 </script>
 
-<script src="../controller/userController.js"></script>
+<script src="../controller/BlogController.js"></script>

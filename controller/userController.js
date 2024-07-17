@@ -5,17 +5,16 @@ function fetchUserPersonalDetails() {
 
     // Make the Ajax request
     $.ajax({
-        url: API_URL + "/users/personal-info/"+iUserID,
+        url: "../ajaxFile/ajaxuserManage.php?sFlag=fetchById&id="+iUserID,
         method: "GET",
         dataType: "json",
         success: function (data) {
             if (data.status === 200) {
-                var aData = data.body;
-                var userAmount = aData.userAmount.available_amount;
-                $('#userID').val(aData.userId);
-                $('#mobileNumberID').val(aData.phoneNumber);
-                $('#userNameId').val(aData.username);
-                $('#balanceID').val('$'+userAmount);
+                var aData = data;
+                $('#userID').val(iUserID);
+                $('#mobileNumberID').val("-");
+                $('#userNameId').val(aData.name);
+                $('#balanceID').val(aData.type == 1? "Admin" :"Normal" );
             }
         },
         error: function (xhr, status, error) {

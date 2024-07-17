@@ -76,6 +76,34 @@
     top: 55px;
 }
 
+.style-switcher .chat-Bot {
+    top: 110px;
+    transition: all;
+    animation: bot 2s alternate infinite;
+    /* Adjust animation duration and other properties as needed */
+}
+
+@keyframes bot {
+    0% {
+        transform: scale(0.8) translate(0%, 50%);
+        opacity: 0;
+        color: var(--skin-color); /* Initial color */
+    }
+
+    50% {
+        transform: scale(1.2) translate(0%, 0%);
+        opacity: 0.9;
+        color: var(--skin-color); /* Intermediate color */
+    }
+
+    100% {
+        transform: scale(1) translate(0%, 0%);
+        opacity: 0.7;
+        color: var(--skin-color); /* Final color */
+    }
+}
+
+
 .style-switcher h4 {
     margin: 0 0 10px;
     color: var(--text-black-700);

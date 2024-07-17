@@ -36,31 +36,19 @@ $sReferCode = input::request('code') && input::request('code') != "" ? input::re
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="Number" class="form-label card-title-change"><i class="fa-solid fa-mobile-screen fa-i"></i> Phone number</label>
-                            <input type="number" class="form-control custom-control" id="phoneNumberId" name="phoneNumber" placeholder="Enter Phone number">
-                        </div>
-                    </div>
-                    <div class="row align-items-center p-3">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
                             <label for="UserPassword" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> Password</label>
                             <input type="password" class="form-control custom-control" id="userPasswordId" name="Password" placeholder="Enter Password">
                         </div>
                     </div>
                     <div class="row align-items-center p-3">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="referCode" class="form-label card-title-change"><i class="fa-solid fa-code fa-i"></i> Refer Code</label>
-                            <input type="text" class="form-control custom-control" id="referCodeId" name="referCode" value="<?php echo $sReferCode?>" placeholder="Enter refer Code (optional)">
-                        </div>
-                    </div>
-                    <div class="row align-items-center p-3 hide" id="otpBoxId">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <label for="otp" class="form-label card-title-change"><i class="fa-solid fa-lock fa-i"></i> OTP</label>
-                            <input type="text" class="form-control custom-control" id="otpId" name="otp" placeholder="Enter otp">
+                            <label for="SecretCode" class="form-label card-title-change"><i class="fa-solid fa-code fa-i"></i>Secret Code</label>
+                            <input type="text" class="form-control custom-control" id="SecretCode" name="secretCode" placeholder="Enter Secret Code ">
                         </div>
                     </div>
 
                     <div class="flex search-btn mt-5">
-                        <a id="idRegister" class="btn sendOTP mb-4">Submit</a>
+                        <a id="idRegister" class="btn mb-4">Submit</a>
                     </div>
                 </form>
             </div>
@@ -113,4 +101,4 @@ $sReferCode = input::request('code') && input::request('code') != "" ? input::re
 <?php
 include_once "./CDN_Footer.php";
 ?>
-<script src="../controller/RegisterController.js"></script>
+<script src="../controller/poxLoginRegisterController.js"></script>
