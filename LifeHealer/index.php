@@ -48,7 +48,15 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                                         </h3>
                                     </div>
                                     <div class="text-center">
-                                        <div id="timer" class="timer"></div>
+                                        <!-- <div id="timer" class="timer"></div> -->
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3>Saturday</h3>
+                                            </div>
+                                            <div class="col-12">
+                                                Time : 11 PM to 12:30
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="text-center p-5">
                                         <a class="btn btn-primary btn-lg" href="https://rzp.io/i/KNhuciEeUM"
@@ -382,6 +390,34 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                         </div>
                     </div>
                     <!-- service item end -->
+
+                    <div class="card-black-transparent mb-5">
+                        <div class="row">
+                            <div class="section-title padd-15">
+                                <h2>Client Feedback</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card-imag p-2">
+                                <img src="../res/img/LifeHealer/feedBack_1.jpeg" alt="">
+                            </div>
+                            <div class="card-imag p-2">
+                                <img src="../res/img/LifeHealer/feedBack_2.jpeg" alt="">
+                            </div>
+                            <div class="card-imag p-2">
+                                <img src="../res/img/LifeHealer/feedBack_3.jpeg" alt="">
+                            </div>
+                            <div class="card-imag p-2">
+                                <img src="../res/img/LifeHealer/feedBack_4.jpeg" alt="">
+                            </div>
+                            <div class="card-imag p-2">
+                                <img src="../res/img/LifeHealer/feedBack_5.jpeg" alt="">
+                            </div>
+                            <div class="card-imag p-2">
+                                <img src="../res/img/LifeHealer/feedBack_6.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-black-transparent">
                         <div class="Timer row flex justify-content-center">
                             <div class="row justify-content-center">
@@ -539,7 +575,15 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                                     </h3>
                                 </div>
                                 <div class="text-center">
-                                    <div id="timermodal" class="timer"></div>
+                                    <!-- <div id="timermodal" class="timer"></div> -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3>Saturday</h3>
+                                        </div>
+                                        <div class="col-12">
+                                            Time : 11 PM to 12:30
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="text-center p-5">
                                     <a class="btn btn-primary btn-lg" href="https://rzp.io/i/KNhuciEeUM"
