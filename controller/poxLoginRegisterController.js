@@ -12,7 +12,7 @@ document.getElementById('idRegister').addEventListener('click', async () => {
     const sSecretCode = document.getElementById('SecretCode').value;
     try {
         $.ajax({
-            url: "../ajaxFile/ajaxuserManage.php?sFlag=addUser",
+            url: "../ajaxFile/ajaxUserManage.php?sFlag=addUser",
             method: "POST",
             data: {
                 username: sUserName,
@@ -46,7 +46,7 @@ function login() {
     const sPassword = document.getElementById('userPasswordId').value;
     try {
         $.ajax({
-            url: "../ajaxFile/ajaxuserManage.php?sFlag=login",
+            url: "../ajaxFile/ajaxUserManage.php?sFlag=login",
             method: "GET",
             data: {
                 name: sUserName,
