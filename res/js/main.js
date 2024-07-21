@@ -3,7 +3,7 @@ var API_URL = "'http://localhost/project/Game-Collection-App";
 
 // =============== types
 const typed = document.querySelector(".typing");
-const string_data = ["Welcome to samrtpoly", "Explore samrtpoly", "Discover a world of samrtpoly"];
+const string_data = ["Welcome to smartpoly", "Explore smartpoly", "Discover a world of smartpoly"];
 let ixd = 1;
 let i = 0;
 
