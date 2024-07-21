@@ -337,7 +337,7 @@ include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
 
                         sTemplate += `
                         <div class="col-lg-6 col-sm-12 col-md-6 p-2">
-                            <a href = 'BlogPage.php?iActive=2&id=${ele.id}'><div class="card p-3">
+                            <a href = 'BlogPage.php?iActive=4&id=${ele.id}'><div class="card p-3">
                                 <h3>${ele.title}</h3>
                                 <div class="card-body">
                                     <p class="card-text">${limitedBlogData}</p>

@@ -6,12 +6,6 @@ include_once ABS_PATH_TO_PROJECT . "view/leftBar.php";
 include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
 include_once '../classes/class.Input.php';
 
-if (!$bIsLogin) {
-    header("Location: loginScreen.php", true, 301);
-    exit;
-} else {
-    $iUserID = $oSessionManager->iUserID;
-}
 
 $iId = input::request('id')?input::request('id'):'';
 
