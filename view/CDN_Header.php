@@ -30,6 +30,6 @@
     <link rel="stylesheet" href="../res/css/variables4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet" href="../res/css/variables5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="../res/css/style-switcher.css">
-    <title>Game Exchange Point's</title>
+    <title>Samrt Poly</title>
 </head>
 <body>
