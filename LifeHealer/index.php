@@ -20,7 +20,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
             <div class="card-transparent shadow-lg p-4 rounded ">
                 <div class="row justify-content-center">
                     <header class="main-box col-12 text-center mb-4">
-                        <h1 class="font-weight-bold fs-1" style="font-family: 'Edu AU VIC WA NT Hand', cursive;font-optical-sizing: auto;font-weight: 600;font-style: normal;;">10X Your Power Of Manifestation Within 2 Hours</h1>
+                        <h1 class="font-weight-bold fs-1" style="font-family: 'Edu AU VIC WA NT Hand', cursive;font-optical-sizing: auto;font-weight: 200;font-style: normal;;">10X Your Power Of Manifestation Within 2 Hours</h1>
                     </header>
                 </div>
                 <div class="row">
@@ -44,7 +44,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                                     <div class="text-center p-5">
                                         <h3>
                                             Register Now to Manifest Your Dream <br>
-                                            <span style="font-size: 22px;" class="red-flag">Live Masterclass on</span>
+                                            <span style="font-size: 1.4rem;" class="red-flag">Live Masterclass on</span>
                                         </h3>
                                     </div>
                                     <div class="text-center">
@@ -572,7 +572,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                                 <div class="text-center p-5">
                                     <h3>
                                         Register Now to Manifest Your Dream <br>
-                                        <span style="font-size: 22px;" class="red-flag">Live Masterclass on</span>
+                                        <span style="font-size: 1.4rem;" class="red-flag">Live Masterclass on</span>
                                     </h3>
                                 </div>
                                 <div class="text-center">
