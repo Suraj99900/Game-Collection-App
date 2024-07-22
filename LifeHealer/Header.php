@@ -48,10 +48,14 @@
     <!-- razorpay CDN -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@500&display=swap" rel="stylesheet">
+
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="../res/css/style.css">
-    <link rel="stylesheet" href="../res/css/variables1.css">
+    <link rel="stylesheet" href="../res/css/variables4.css">
     <link rel="stylesheet" href="../res/css/variables1.css" class="alternate-style" title="color-1" disabled>
     <link rel="stylesheet" href="../res/css/variables2.css" class="alternate-style" title="color-2" disabled>
     <link rel="stylesheet" href="../res/css/variables3.css" class="alternate-style" title="color-3" disabled>

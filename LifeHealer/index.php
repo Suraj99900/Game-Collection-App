@@ -20,7 +20,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
             <div class="card-transparent shadow-lg p-4 rounded ">
                 <div class="row justify-content-center">
                     <header class="main-box col-12 text-center mb-4">
-                        <h1 class="font-weight-bold fs-1">10X Your Power Of Manifestation Within 2 Hours</h1>
+                        <h1 class="font-weight-bold fs-1" style="font-family: 'Edu AU VIC WA NT Hand', cursive;font-optical-sizing: auto;font-weight: 600;font-style: normal;;">10X Your Power Of Manifestation Within 2 Hours</h1>
                     </header>
                 </div>
                 <div class="row">
@@ -44,7 +44,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                                     <div class="text-center p-5">
                                         <h3>
                                             Register Now to Manifest Your Dream <br>
-                                            <span style="font-size: 16px;" class="red-flag">Live Masterclass on</span>
+                                            <span style="font-size: 22px;" class="red-flag">Live Masterclass on</span>
                                         </h3>
                                     </div>
                                     <div class="text-center">
@@ -71,9 +71,9 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                                     </div>
 
                                     <div class="text-center p-5">
-                                        <a type="button" class="btn btn-primary fs-5" data-bs-toggle="modal"
+                                        <!-- <a type="button" class="btn btn-primary fs-5" data-bs-toggle="modal"
                                             data-bs-target="#ContactUsId"><i class="fa-solid fa-id-badge"></i> Contact
-                                            Us</a>
+                                            Us</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -277,7 +277,8 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                             <div class="upload-btn-section shadow-lg p-lg-5 p-sm-5 p-md-5 mb-5 rounded flex"
                                 style="position: relative;">
                                 <div class="flex">
-                                    <h3 class="text-center" style="color:red;">Unicorn Coach Kavita Jadhav</h3>
+                                    <h3 class="text-center" style="color:var(--skin-color);">Unicorn Coach Kavita Jadhav
+                                    </h3>
                                     <p class="p-2" style="text-align: justify;">Hello I am Kavita your Life
                                         Transformation Coach who uses positive psychology to help people design their
                                         best life.I am known for my groundbreaking work in the areas of discipline,
@@ -571,7 +572,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
                                 <div class="text-center p-5">
                                     <h3>
                                         Register Now to Manifest Your Dream <br>
-                                        <span style="font-size: 16px;" class="red-flag">Live Masterclass on</span>
+                                        <span style="font-size: 22px;" class="red-flag">Live Masterclass on</span>
                                     </h3>
                                 </div>
                                 <div class="text-center">
@@ -644,7 +645,7 @@ $eventMinute = EVENT_MINUTE; // Set your event minute
         const countdownElement = document.getElementById('countdown');
 
         // Update countdown content
-        countdownElement.innerHTML = `<div class='card-black-transparent flex text-center fs-1' style='color:red;'><i class="fa-solid fa-hourglass-end"></i> <span class = 'round-timer'>${countdownMinTime} MINUTES</span> : <span class = 'round-timer'>${countdownSecondTime} SECONDS</span></div>`;
+        countdownElement.innerHTML = `<div class='card-black-transparent flex text-center fs-1' style='color:var(--skin-color);'><i class="fa-solid fa-hourglass-end"></i> <span class = 'round-timer'>${countdownMinTime} MINUTES</span> : <span class = 'round-timer'>${countdownSecondTime} SECONDS</span></div>`;
         countdownSecondTime--;
 
         // Check and update minutes if seconds reach below 0

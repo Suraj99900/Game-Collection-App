@@ -67,14 +67,14 @@
 }
 
 .red-flag {
-    color: red;
+    color: var(--skin-color);
     font-size: 18px;
 }
 
 .timer {
     font-size: 2rem;
     font-weight: bold;
-    color: red;
+    color: var(--skin-color);
 }
 
 .card-imag {
@@ -88,7 +88,7 @@
 li {
     font-size: 1.5rem;
     padding: 1rem;
-    color: red;
+    color: var(--text-black-900);
 }
 
 .carousel-inner .carousel-item img {
