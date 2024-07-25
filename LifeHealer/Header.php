@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
     <title>Life Healer Kavita - 10X Your Power of Manifestation</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="../res/img/LifeHealer/appicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../res/img/LifeHealer/appicon.png" type="image/x-icon">
+    <link rel="icon" href="https://lifehealerkavita.com/res/img/LifeHealer/appicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://lifehealerkavita.com/res/img/LifeHealer/appicon.png" type="image/x-icon">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -23,16 +24,29 @@
     <meta property="og:title" content="Life Healer Kavita - 10X Your Power of Manifestation">
     <meta property="og:description"
         content="Life Healer offers holistic health solutions to achieve physical, mental, and spiritual wellness. Join us for a healthier you.">
-    <meta property="og:image" content="../res/img/LifeHealer/appicon.png">
+    <meta property="og:image" content="https://lifehealerkavita.com/res/img/LifeHealer/appicon.png">
     <meta property="og:url" content="https://lifehealerkavita.com">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="Life Healer Kavita - 10X Your Power of Manifestation">
     <meta name="twitter:title" content="Life Healer Kavita - 10X Your Power of Manifestation">
     <meta name="twitter:description"
         content="Life Healer offers holistic health solutions to achieve physical, mental, and spiritual wellness. Join us for a healthier you.">
-    <meta name="twitter:image" content="../res/img/LifeHealer/appicon.png">
+    <link rel="shortcut icon" href="https://lifehealerkavita.com/res/img/LifeHealer/appicon.png" type="image/x-icon"
+        id="ff_favicon" />
+    <meta name="twitter:image" content="https://lifehealerkavita.com/res/img/LifeHealer/appicon.png">
+
+    <link rel="canonical" href="https://lifehealerkavita.com" />
+    <meta property="og:url" content="https://lifehealerkavita.com" />
+    <meta itemprop="url" content="https://lifehealerkavita.com" />
+    <meta name="twitter:url" content="https://lifehealerkavita.com" />
+
+    <meta name="author" content="Kavita">
+    <meta name="site_id" content="lifehealerkavita.com/">
+    <meta name="LifeHealer_id" content="https://lifehealerkavita.com/LifeHealer/index.php">
+    <meta name="LifeHealer_page_id" content="https://lifehealerkavita.com/LifeHealer/index.php">
+    <meta name="pageType" content="default">
 
     <!-- CDNS -->
     <!-- Bootstrap 5 link -->
