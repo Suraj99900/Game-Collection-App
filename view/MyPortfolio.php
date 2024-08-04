@@ -443,12 +443,12 @@ include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
                     });
                     $("#blogBoxId").html(sTemplate);
                 } else {
-                    responsePop('Error', response.message, 'error', 'ok');
+                    // responsePop('Error', response.message, 'error', 'ok');
                 }
             },
             error: function (error) {
                 // Handle Ajax error for session.php
-                responsePop('Error', 'Error on server', 'error', 'ok');
+                // responsePop('Error', 'Error on server', 'error', 'ok');
             }
         });
     }
