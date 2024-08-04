@@ -38,11 +38,64 @@ include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
     </section>
     <!-- home section end -->
 
+    <section class="section AI-section" id="AISection">
+        <div class="container">
+            <div class="row">
+                <div class="section-title padd-15">
+                    <h2>Medical Recommendation System</h2>
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12 col-md-4 p-2">
+                            <a data-bs-toggle="offcanvas" id="idDisesePredectionSystem" href="#idDPS" role="button"
+                                aria-controls="idDPS">
+                                <div class="card p-3">
+                                    <h4 class="text-center">Disease Prediction System</h4>
+                                    <div class="card-body">
+                                        <div class="home-img-box padd-15">
+                                            <img src="../res/img/DPS-img.jpg" style="width: 15rem; height:15rem;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 col-md-4 p-2">
+                            <a href='BlogPage.php?iActive=4&id=${ele.id}'>
+                                <div class="card p-3">
+                                    <h4 class="text-center">HyperTension Prediction System</h4>
+                                    <div class="card-body">
+                                        <div class="home-img-box padd-15">
+                                            <img src="../res/img/hypertension-img.jpg"
+                                                style="width: 15rem; height:15rem;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 col-md-4 p-2">
+                            <a href='BlogPage.php?iActive=4&id=${ele.id}'>
+                                <div class="card p-3">
+                                    <h4 class="text-center">HyperTension Prediction System</h4>
+                                    <div class="card-body">
+                                        <div class="home-img-box padd-15">
+                                            <img src="../res/img/Daibetes-system-img.jpg"
+                                                style="width: 15rem; height:15rem;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Blog section start -->
     <section class="section blog-section" id="BlogSectionId">
         <div class="container">
-        <div class="row">
+            <div class="row">
                 <div class="section-title padd-15">
                     <h2>Blog</h2>
                 </div>
@@ -295,6 +348,49 @@ include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
     </div>
 </div>
 
+<div class="offcanvas offcanvas-end bg-card-high" tabindex="-1" id="idDPS" aria-labelledby="offcanvasRightLabel"
+    style="width: 60%;">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title c-text" id="offcanvasAddStaffLabel">Disease Prediction System</h3>
+        <i data-bs-dismiss="offcanvas" aria-label="Close"
+            class="c-text btn-close text-reset btn c-text fa-solid fa-circle-xmark" style="font-size: 1.5rem;"></i>
+    </div>
+    <div class="offcanvas-body bg-card-high" style="height: 100vh;">
+        <div class="upload-btn-section shadow-sm p-lg-5 p-sm-5 p-md-5 mb-5  rounded flex">
+            <form>
+
+                <div class="row align-items-center p-3">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="StaffPassword" class="form-label card-title-change"
+                            style="color: var(--skin-color);font-size: 1.5rem;"><i
+                                class="fa-solid fa-heart-circle-bolt"></i> Select Symptoms</label>
+                        <select multiple class="form-select custom-control c-text-vl" id="idSymptoms" name="type">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex search-btn mt-5">
+                    <a id="predectMedicalData" class="btn mb-4">Submit</a>
+                </div>
+
+                <div class="predectedSystemBox row hide">
+                    <h4 class="text-center py-2 " style="color:var(--skin-color);">Note:- This prediction is not 100%
+                        accurate.</h4>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4" id="idDisease"></div>
+                        <div class="col-sm-4 col-md-4 col-lg-4" id="idDescription"></div>
+                        <div class="col-sm-4 col-md-4 col-lg-4" id="idMedication"></div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-sm-4 col-md-4 col-lg-4" id="idPrecaution"></div>
+                        <div class="col-sm-4 col-md-4 col-lg-4" id="idWorkout"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- style switcher end -->
 
 <!-- manu toggler start -->
@@ -356,6 +452,112 @@ include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
             }
         });
     }
+
+    $("#idSymptoms").select2({
+        ajax: {
+            url: "../ajaxFile/ajaxUserManage.php",
+            dataType: 'json',
+            delay: 250, // Add delay for debouncing
+            data: function (params) {
+                return {
+                    sFlag: 'userSymptoms',
+                    name: params.term // search term
+                };
+            },
+            beforeSend: function () {
+                // Show loading indicator
+                $('#loadingIndicator').show();
+            },
+            complete: function () {
+                // Hide loading indicator
+                $('#loadingIndicator').hide();
+            },
+            processResults: function (data) {
+                if (data.status === 200) {
+                    return {
+                        results: data[0].map(function (item) {
+                            return {
+                                id: item.name,
+                                text: item.name // assuming 'name' is the property to be displayed
+                            };
+                        })
+                    };
+                } else {
+                    responsePop('Error', data.message, 'error', 'ok');
+                    return {
+                        results: []
+                    };
+                }
+            },
+            error: function (error) {
+                responsePop('Error', 'Error on server', 'error', 'ok');
+            },
+            cache: true
+        },
+        minimumInputLength: 0,
+        language: {
+            inputTooShort: function () {
+                return 'Type at least one character to search';
+            },
+            loadingMore: function () {
+                return 'Loading more results…';
+            }
+        },
+        placeholder: "Select symptoms",
+        theme: "default"
+    });
+
+   
+
+
+    $('#idDisesePredectionSystem').on('click', () => {
+        $('.predectedSystemBox').addClass('hide');
+    });
+
+    $('#predectMedicalData').on('click', () => {
+        let symptoms = $('#idSymptoms').val().toString();
+
+        $.ajax({
+            url: "https://smartpoly.model.lifehealerkavita.com/api/predict",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({ symptoms: symptoms }),
+            success: function (response) {
+                if (response.Disease) {
+                    // Create HTML content dynamically
+                    const sections = {
+                        Disease: response.Disease,
+                        Description: response.Description,
+                        Medication: response.Medication,
+                        Precaution: response.Precaution,
+                        Workout: response.Workout
+                    };
+
+                    // Generate HTML for each section
+                    Object.keys(sections).forEach(key => {
+                        const value = sections[key];
+                        $(`#id${key}`).html(`
+                        <div class="row text-center s-box c-text">
+                            <h5 class="text-center" style="color: var(--skin-color); font-size:1.4rem;">${key}</h5>
+                            <p class="text-center" style='font-size:1.2rem;'>${value}</p>
+                        </div>
+                    `);
+                    });
+
+                    // Show results
+                    $('.predectedSystemBox').removeClass('hide');
+                } else {
+                    responsePop('Error', response.message, 'error', 'ok');
+                    $('.predectedSystemBox').addClass('hide');
+                }
+            },
+            error: function () {
+                responsePop('Error', 'Error on server', 'error', 'ok');
+            }
+        });
+    });
+
+
 
 
 </script>

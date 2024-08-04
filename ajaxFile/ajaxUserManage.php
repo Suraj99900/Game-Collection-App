@@ -6,6 +6,8 @@ require_once "../classes/UserManage.php";
 include_once "../classes/clientCode.php";
 include_once "../classes/sessionManager.php";
 include_once "../classes/class.Input.php";
+include_once "../classes/function.php";
+
 $sFlag = Input::request('sFlag');
 
 if ($sFlag == 'addUser') {
@@ -73,4 +75,12 @@ if ($sFlag == "login") {
     $oResult = $userManage->login($name, $password);
     echo json_encode(array($oResult, "status" => 200));
 }
+
+if($sFlag == 'userSymptoms'){
+    $name = Input::request('name') ? Input::request('name') : '';
+    $aNameData = fetchSymptoms($name);
+
+    echo json_encode(array($aNameData, "status" => 200)); 
+}
+
 ?>

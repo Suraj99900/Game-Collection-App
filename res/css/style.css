@@ -529,7 +529,12 @@ h3.my-profession {
     max-width: 50%;
     position: relative;
     text-align: center;
-
+}
+.home-img-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
 }
 
 /* .home-img::after {
