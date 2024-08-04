@@ -62,7 +62,7 @@ include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
                         <div class="col-lg-4 col-sm-12 col-md-4 p-2">
                             <a href='BlogPage.php?iActive=4&id=${ele.id}'>
                                 <div class="card p-3">
-                                    <h4 class="text-center">HyperTension Prediction System</h4>
+                                    <h4 class="text-center">Hypertension Prediction System</h4>
                                     <div class="card-body">
                                         <div class="home-img-box padd-15">
                                             <img src="../res/img/hypertension-img.jpg"
@@ -75,7 +75,7 @@ include_once ABS_PATH_TO_PROJECT . "classes/sessionCheck.php";
                         <div class="col-lg-4 col-sm-12 col-md-4 p-2">
                             <a href='BlogPage.php?iActive=4&id=${ele.id}'>
                                 <div class="card p-3">
-                                    <h4 class="text-center">HyperTension Prediction System</h4>
+                                    <h4 class="text-center">Diabetes Prediction System</h4>
                                     <div class="card-body">
                                         <div class="home-img-box padd-15">
                                             <img src="../res/img/Daibetes-system-img.jpg"
